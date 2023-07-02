@@ -28,7 +28,7 @@ const LoginPage = () => {
         const verify = data.find(i =>
             (loginData.Username === i.email && loginData.Password === i.password))
         if (verify) {
-            n('/Home')
+            n('/dashboard')
         }
         else {
             window.alert("details not matched")
