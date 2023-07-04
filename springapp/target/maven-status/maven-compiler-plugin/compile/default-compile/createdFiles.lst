@@ -1,0 +1,7 @@
+com/example/springapp/SpringappApplication.class
+com/example/springapp/controller/DebtsController.class
+com/example/springapp/model/LoginRegisterDetails.class
+com/example/springapp/repository/DebtsRepository.class
+com/example/springapp/repository/LoginRepo.class
+com/example/springapp/controller/LoginRegisterController.class
+com/example/springapp/model/DebtsModel.class
