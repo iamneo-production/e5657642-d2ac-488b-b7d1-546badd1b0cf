@@ -1,0 +1,212 @@
+
+    @media screen and (max-width:3000px){
+        .frame{
+            padding-top: 4vh;
+            width: 132.5vh;
+            height:30vh;
+            background-color: rgb(255, 255, 255,0.7);
+            font-size: 2vh;
+            padding-left: 3%;
+        }
+        .inputbox{
+            font-family:'Lucida Sans';
+        }
+        
+        .inputbox1{
+            margin-left: 10vh;
+            height: 2vh;
+            width: 36vh;
+            background-color: aliceblue;
+            border: none;
+            /* border: 1px solid black; */
+            border-bottom: 1px solid black;
+            /* caret-color: blue; */
+            outline: none;
+        }
+        .inputbox2{
+            margin-left: 10%;
+            height: 2vh;
+            width: 36vh;
+            background-color: aliceblue;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+        .inputbox3{
+            margin-left: 3.1%;
+            height: 2vh;
+            width: 36vh;
+            background-color: aliceblue;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+        .inputbox4{
+            margin-left: 4.6%;
+            height: 2vh;
+            width: 36vh;
+            background-color: aliceblue;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+        #button1{
+            margin-left: 3vh;
+            width: 15vh;
+            height: 4.8vh;
+            margin-bottom: 1.2vh;
+            background-color:rgb(39, 93, 240);
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 5px 0 0 5px;
+            border: none;
+            font-family:'Lucida Sans';
+        }
+        #button1:hover{
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: rgb(92, 135, 253);
+        }
+        #buttonclear{
+            width: 5vh;
+            height: 4.8vh;
+            border-radius: 0 5px 5px 0 ;
+            background-color:rgb(216, 15, 8);
+            color: rgb(255, 255, 255);
+            border: none;
+            font-weight: bold;
+            font-family:'Lucida Sans';
+        }
+        #buttonclear:hover{
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: rgb(219, 88, 84);
+        }
+        #button2{
+            margin-left: 4.5vh;
+            margin-bottom: 1.2vh;
+            width: 15vh;
+            height: 4.8vh;
+            background-color:rgb(94, 178, 58);
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            font-family:'Lucida Sans';
+        }
+        #button2:hover{
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: rgb(112, 208, 71);
+        }
+        #button3{
+            margin-left: 5vh;
+            margin-bottom: 1.2vh;
+            width: 17vh;
+            height: 4.8vh;
+            background-color:rgb(216, 15, 8);
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            font-family:'Lucida Sans';
+        }
+        #button3:hover{
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: rgb(219, 88, 84);
+        }
+        #report_button{
+            width: 17vh;
+            height: 4.8vh;
+            background-color:rgb(4, 121, 142);
+            color: rgb(255, 255, 255);
+            /* font-family: sans-serif; */
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            font-family:'Lucida Sans';
+            margin-left: 6%;
+        }
+        #report_button:hover{
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: rgb(38, 188, 215);
+        }
+        #report_position{
+            margin-left: 47.5vh;
+            margin-top: -3vh;
+        }
+        .output{
+            margin-left: 65vh;
+            margin-top: -26vh;
+        }
+        
+        table, th, td {
+            margin-top: 4vh;
+            border:1px solid black;
+            border-collapse: collapse;
+            width: 137vh;
+            height: 5vh;
+          }
+        th{
+            /* background-color: rgb(116, 167, 230); */
+            background-color:rgb(16, 94, 133);
+            font-size: medium;
+            font-family:'Lucida Sans';
+            color: white;
+            border:1px solid white;
+        }
+        td{
+            height: flex;
+            padding: 1%;
+            background-color: WHITE;
+        }
+        .pop{
+            height: auto;
+            margin-left: 10vh;
+            width: 55vh;
+        }
+        .popcontent{
+        margin-left: -5vh;
+        margin-top: 5vh;
+        
+        }
+        #popclose{
+            margin-left: 45vh;
+            margin-top: -10vh;
+            width: 1vh;
+        }
+        #button4{
+            width: 5vh;
+            height: 4.5vh;
+            background-color:rgb(187, 10, 10);
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+        }
+        #button4:hover{
+            transition-duration: 0.4s;
+            cursor: pointer;
+            background-color: rgb(239, 66, 66);
+        }
+        #popremovebutton{
+            margin-left: 23%;
+            margin-top: 12vh;
+        }
+        #options_debt{
+            margin-left: 22%;
+        }
+        #select_debt{
+            width: 27vh;
+            height: 4vh;
+            margin-top: 3vh;
+            /* background-color:rgb(145, 198, 241); */
+            background-color: rgb(206, 231, 253);
+        }
+        }
