@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 
 const RegisterPage = () => {
-    const [dbdata, setdbdata] = useState()
+    //const [dbdata, setdbdata] = useState()
 
     const [SignupData, setSignupData] = useState(
         {
@@ -22,34 +22,58 @@ const RegisterPage = () => {
     const onchange = (e) => {
         setSignupData({ ...SignupData, [e.target.name]: e.target.value })
     }
-    useEffect(() => {
-        axios.get("http://localhost:8081/user")
-            .then((resp) => setdbdata(resp.data))
-            .catch((error) => {
+    // useEffect(() => {
+    //     axios.get("/user")
+    //         .then((resp) => setdbdata(resp.data))
+    //         .catch((error) => {
 
-                console.error(error);
-            });
-    }, []);
+    //             console.error(error);
+    //         });
+    // }, []);
 
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const auth = dbdata.find(i => (SignupData.email === i.email))
-        if (auth) {
-            window.alert("email already exist")
+        if (password === Reenterpassword) {
+            console.log("Signup form submitted!");
+            axios.post("https://8080-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io/register", SignupData)
+                .then(() => window.alert("registered sucessfully")
+                    .catch((error) => console.log(error)))
         }
         else {
-
-            if (password === Reenterpassword) {
-                console.log("Signup form submitted!");
-                axios.post("http://localhost:8081/user/register", SignupData)
-                    .then(() => window.alert("registered sucessfully")
-                        .catch((error) => console.log(error)))
-            }
-            else {
-                window.alert("password dosent matched")
-            }
+            window.alert("password dosent matched")
         }
+        // const auth = dbdata.find(i => (SignupData.email === i.email))
+        // if (auth) {
+        //     window.alert("email already exist")
+        // }
+        // else {
+
+        // if (password === Reenterpassword) {
+        //     console.log("Signup form submitted!");
+        
+        //     fetch("https://8080-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io/user/register", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify(SignupData)
+        //     })
+        //     .then(response => {
+        //         if (response.ok) {
+        //             window.alert("Registered successfully");
+        //         } else {
+        //             throw new Error("Network response was not ok.");
+        //         }
+        //     })
+        //     .catch(error => {
+        //         console.log(error);
+        //     });
+        // } else {
+        //     window.alert("Password doesn't match");
+        // }
+        
+        // }
         // Reset the form fields
         setSignupData({ role: "", firstname: "", lastname: "", email: "", password: "", Reenterpassword: "" })
 
@@ -120,7 +144,7 @@ const RegisterPage = () => {
                         />
                         <br />
                         <button id="button1" type="submit" value="submit">Sign up</button>
-                        <Link to={'/login'}><button id="button2">Back to Login</button></Link>
+                        <Link to={'/'}><button id="button2">Back to Login</button></Link>
 
                     </form>
                 </section>
