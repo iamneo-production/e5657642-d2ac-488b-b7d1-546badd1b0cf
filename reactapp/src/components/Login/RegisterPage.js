@@ -35,7 +35,7 @@ const RegisterPage = () => {
       
         try {
           // Check if email already exists in the database
-          const response = await axios.get("https://8080-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io/user");
+          const response = await axios.get("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/user");
           const users = response.data;
       
           const emailExists = users.some((user) => user.email === email);
@@ -44,7 +44,7 @@ const RegisterPage = () => {
             window.alert("Email already exists. Please use a different email.");
           } else {
             // Send data to the database
-            await axios.post("https://8080-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io/register", SignupData);
+            await axios.post("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/register", SignupData);
             window.alert("Registered successfully");
           }
       
