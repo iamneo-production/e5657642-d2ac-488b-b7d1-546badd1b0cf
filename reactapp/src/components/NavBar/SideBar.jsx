@@ -16,7 +16,7 @@ const SideBar = ({ children }) => {
 
   const handleLogout = () => {
     //Assuming successfull logout
-    navigate('/login')
+    navigate('/')
   }
 
 

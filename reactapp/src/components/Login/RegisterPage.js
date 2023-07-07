@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
+import * as EmailValidator from 'email-validator';
 
 const RegisterPage = () => {
     const [SignupData, setSignupData] = useState(
@@ -22,20 +23,45 @@ const RegisterPage = () => {
     }
    
 
-    const handleSubmit = (event) => {
+ 
+    const handleSubmit = async (event) => {
         event.preventDefault();
-       
-
-            if (password === Reenterpassword) {
-                console.log("Signup form submitted!");
-                axios.post("https://8080-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io/register", SignupData)
-                    .then(() => window.alert("registered sucessfully")
-                        .catch((error) => console.log(error)))
-            }
       
-        setSignupData({ role: "", firstname: "", lastname: "", email: "", password: "", Reenterpassword: "" })
-
-    };
+        // Validate email format
+        if (!EmailValidator.validate(email)) {
+          window.alert("Please enter a valid email address");
+          return;
+        }
+      
+        try {
+          // Check if email already exists in the database
+          const response = await axios.get("https://8080-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io/user");
+          const users = response.data;
+      
+          const emailExists = users.some((user) => user.email === email);
+      
+          if (emailExists) {
+            window.alert("Email already exists. Please use a different email.");
+          } else {
+            // Send data to the database
+            await axios.post("https://8080-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io/register", SignupData);
+            window.alert("Registered successfully");
+          }
+      
+          setSignupData({
+            role: "",
+            firstname: "",
+            lastname: "",
+            email: "",
+            password: "",
+            Reenterpassword: ""
+          });
+        } catch (error) {
+          console.error("Registration failed:", error);
+          window.alert("Registration failed. Please try again.");
+        }
+      };
+      
 
 
 
@@ -104,7 +130,7 @@ const RegisterPage = () => {
                             />
                             <br />
                             <button id="button1" type="submit" value="submit">Sign up</button>
-                            <Link to={'/login'}><button id="button2">Back to Login</button></Link>
+                            <Link to={'/'}><button id="button2">Back to Login</button></Link>
 
                         </form>
                     </section>
