@@ -28,6 +28,7 @@ const Accounts = () => {
         console.log(error);
         console.log('Error fetching accounts');
       });
+      
   };
 
   const handleAddAccount = (newAccount) => {
@@ -42,6 +43,7 @@ const Accounts = () => {
         console.log(error);
         console.log('Error adding account');
       });
+      window.location.reload(false);
   };
 
   const handleDeleteAccount = () => {
@@ -58,6 +60,7 @@ const Accounts = () => {
           console.log(error);
           console.log('Error deleting account');
         });
+        window.location.reload(false);
     }
   };
 
