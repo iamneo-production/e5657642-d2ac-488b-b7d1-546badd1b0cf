@@ -58,6 +58,11 @@ main {
   padding: 10px 1rem;
 }
 
+.header-username span {
+  font-size: 25px;
+  letter-spacing: .08rem;
+}
+
 .top_section {
   display: flex;
   margin-top: 15px;

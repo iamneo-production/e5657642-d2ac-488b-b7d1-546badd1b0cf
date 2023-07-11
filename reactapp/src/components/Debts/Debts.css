@@ -3,7 +3,8 @@
         .frame{
             padding-top: 4vh;
             width: 132.5vh;
-            height:30vh;
+            height:32vh;
+            margin-left: 60px;
             background-color: rgb(255, 255, 255,0.7);
             font-size: 2vh;
             padding-left: 3%;
@@ -147,15 +148,17 @@
         
         table, th, td {
             margin-top: 4vh;
+            margin-left: 60px;
             border:1px solid black;
             border-collapse: collapse;
-            width: 137vh;
+            width: 137.5vh;
             height: 5vh;
           }
         th{
             /* background-color: rgb(116, 167, 230); */
             background-color:rgb(16, 94, 133);
-            font-size: medium;
+            font-size: 14px;
+            padding: 5px;
             font-family:'Lucida Sans';
             color: white;
             border:1px solid white;
@@ -163,6 +166,7 @@
         td{
             height: flex;
             padding: 1%;
+            font-size: 15px;
             background-color: WHITE;
         }
         .pop{

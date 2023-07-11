@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
+import * as EmailValidator from 'email-validator';
 
 const RegisterPage = () => {
-    const [dbdata, setdbdata] = useState()
-
     const [SignupData, setSignupData] = useState(
         {
 
@@ -22,38 +21,48 @@ const RegisterPage = () => {
     const onchange = (e) => {
         setSignupData({ ...SignupData, [e.target.name]: e.target.value })
     }
-    useEffect(() => {
-        axios.get("http://localhost:8081/user")
-            .then((resp) => setdbdata(resp.data))
-            .catch((error) => {
+   
 
-                console.error(error);
-            });
-    }, []);
-
-
-    const handleSubmit = (event) => {
+ 
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        const auth = dbdata.find(i => (SignupData.email === i.email))
-        if (auth) {
-            window.alert("email already exist")
+      
+        // Validate email format
+        if (!EmailValidator.validate(email)) {
+          window.alert("Please enter a valid email address");
+          return;
         }
-        else {
-
-            if (password === Reenterpassword) {
-                console.log("Signup form submitted!");
-                axios.post("http://localhost:8081/user/register", SignupData)
-                    .then(() => window.alert("registered sucessfully")
-                        .catch((error) => console.log(error)))
-            }
-            else {
-                window.alert("password dosent matched")
-            }
+      
+        try {
+          // Check if email already exists in the database
+          const response = await axios.get("https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/user");
+          const users = response.data;
+      
+          const emailExists = users.some((user) => user.email === email);
+      
+          if (emailExists) {
+            window.alert("Email already exists. Please use a different email.");
+          } else {
+            // Send data to the database
+            await axios.post("https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/register", SignupData);
+            window.alert("Registered successfully");
+          }
+      
+          setSignupData({
+            role: "",
+            firstname: "",
+            lastname: "",
+            email: "",
+            password: "",
+            Reenterpassword: ""
+          });
+        } catch (error) {
+          console.error("Registration failed:", error);
+          window.alert("Registration failed. Please try again.");
         }
-        // Reset the form fields
-        setSignupData({ role: "", firstname: "", lastname: "", email: "", password: "", Reenterpassword: "" })
+      };
+      
 
-    };
 
 
     return (
@@ -121,7 +130,7 @@ const RegisterPage = () => {
                             />
                             <br />
                             <button id="button1" type="submit" value="submit">Sign up</button>
-                            <Link to={'/login'}><button id="button2">Back to Login</button></Link>
+                            <Link to={'/'}><button id="button2">Back to Login</button></Link>
 
                         </form>
                     </section>
@@ -130,5 +139,6 @@ const RegisterPage = () => {
         </div>
     );
 };
+
 
 export default RegisterPage;
