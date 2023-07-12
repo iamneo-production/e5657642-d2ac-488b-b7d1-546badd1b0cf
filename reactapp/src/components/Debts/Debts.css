@@ -2,20 +2,24 @@
     @media screen and (max-width:3000px){
         .frame{
             padding-top: 4vh;
-            width: 132.5vh;
-            height:30vh;
+            /* width: 132.5vh; */
+            width: 96%;
+            height:32vh;
             background-color: rgb(255, 255, 255,0.7);
             font-size: 2vh;
             padding-left: 3%;
+
         }
         .inputbox{
             font-family:'Lucida Sans';
+            font-size: 2vh;
+            width: 100%;
         }
         
         .inputbox1{
-            margin-left: 10vh;
+            margin-left: 7.85%;
             height: 2vh;
-            width: 36vh;
+            width: 25%;
             background-color: aliceblue;
             border: none;
             /* border: 1px solid black; */
@@ -26,16 +30,16 @@
         .inputbox2{
             margin-left: 10%;
             height: 2vh;
-            width: 36vh;
+            width: 25%;
             background-color: aliceblue;
             border: none;
             border-bottom: 1px solid black;
             outline: none;
         }
         .inputbox3{
-            margin-left: 3.1%;
+            margin-left: 3.2%;
             height: 2vh;
-            width: 36vh;
+            width: 25%;
             background-color: aliceblue;
             border: none;
             outline: none;
@@ -44,14 +48,14 @@
         .inputbox4{
             margin-left: 4.6%;
             height: 2vh;
-            width: 36vh;
+            width: 25%;
             background-color: aliceblue;
             border: none;
             outline: none;
             border-bottom: 1px solid black;
         }
         #button1{
-            margin-left: 3vh;
+            margin-left: 3%;
             width: 15vh;
             height: 4.8vh;
             margin-bottom: 1.2vh;
@@ -102,7 +106,7 @@
             background-color: rgb(112, 208, 71);
         }
         #button3{
-            margin-left: 5vh;
+            /* margin-left: 5vh; */
             margin-bottom: 1.2vh;
             width: 17vh;
             height: 4.8vh;
@@ -145,15 +149,22 @@
             margin-top: -26vh;
         }
         
-        table, th, td {
+        th, td {
             margin-top: 4vh;
             border:1px solid black;
             border-collapse: collapse;
             width: 137vh;
             height: 5vh;
+            text-align: center;
+          }
+          table {
+            margin-top: 4vh;
+            border:1px solid black;
+            border-collapse: collapse;
+            width: 99%;
+            height: 5vh;
           }
         th{
-            /* background-color: rgb(116, 167, 230); */
             background-color:rgb(16, 94, 133);
             font-size: medium;
             font-family:'Lucida Sans';
@@ -165,21 +176,7 @@
             padding: 1%;
             background-color: WHITE;
         }
-        .pop{
-            height: auto;
-            margin-left: 10vh;
-            width: 55vh;
-        }
-        .popcontent{
-        margin-left: -5vh;
-        margin-top: 5vh;
-        
-        }
-        #popclose{
-            margin-left: 45vh;
-            margin-top: -10vh;
-            width: 1vh;
-        }
+       
         #button4{
             width: 5vh;
             height: 4.5vh;
@@ -189,15 +186,12 @@
             font-weight: bold;
             border-radius: 5px;
             border: none;
+            align-items: center;
         }
         #button4:hover{
             transition-duration: 0.4s;
             cursor: pointer;
             background-color: rgb(239, 66, 66);
-        }
-        #popremovebutton{
-            margin-left: 23%;
-            margin-top: 12vh;
         }
         #options_debt{
             margin-left: 22%;
@@ -210,3 +204,86 @@
             background-color: rgb(206, 231, 253);
         }
         }
+
+        @media screen and (min-width: 1500px) {
+            .output{
+                margin-left: 75vh;
+                margin-top: -26vh;
+            }
+
+            .inputbox2{
+                margin-left: 9.8%;
+                height: 2vh;
+                width: 25%;
+                background-color: aliceblue;
+                border: none;
+                border-bottom: 1px solid black;
+                outline: none;
+            }
+
+            .inputbox3{
+                margin-left: 3.9%;
+                height: 2vh;
+                width: 25%;
+                background-color: aliceblue;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid black;
+            }
+            .inputbox4{
+                margin-left: 5.1%;
+                height: 2vh;
+                width: 25%;
+                background-color: aliceblue;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid black;
+            }
+          }
+
+          @media screen and (max-height: 768px) {
+
+            .frame{
+                padding-top: 4vh;
+                /* width: 132.5vh; */
+                width: 96%;
+                height:33vh;
+                background-color: rgb(255, 255, 255,0.7);
+                font-size: 2vh;
+                padding-left: 3%;
+    
+            }
+            .output{
+                margin-left: 75vh;
+                margin-top: -26vh;
+            }
+
+            .inputbox2{
+                margin-left: 9.8%;
+                height: 2vh;
+                width: 25%;
+                background-color: aliceblue;
+                border: none;
+                border-bottom: 1px solid black;
+                outline: none;
+            }
+
+            .inputbox3{
+                margin-left: 3.9%;
+                height: 2vh;
+                width: 25%;
+                background-color: aliceblue;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid black;
+            }
+            .inputbox4{
+                margin-left: 5.1%;
+                height: 2vh;
+                width: 25%;
+                background-color: aliceblue;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid black;
+            }
+          }

@@ -28,7 +28,7 @@ const Header = () => {
       <div className='header1'>
         <h3>Personal Finance Manager</h3>
         <div className='header-username'>
-          <h6>Welcome <span>{firstname}</span></h6>
+          <h6>Welcome {firstname}</h6>
         </div>
       </div>
     </div>
