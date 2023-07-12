@@ -27,13 +27,10 @@ const Header = () => {
 
   return (
     <div id='header1'>
-      <div style={{
-        fontSize: "25px",
-        fontStyle: 'bold',
-      }} className='header1'>
+      <div className='header1'>
         <h3>Personal Finance Manager</h3>
         <div className='header-username'>
-          <h6>Welcome <span>{firstname}</span></h6>
+          <h6>Welcome {firstname}</h6>
         </div>
       </div>
     </div>

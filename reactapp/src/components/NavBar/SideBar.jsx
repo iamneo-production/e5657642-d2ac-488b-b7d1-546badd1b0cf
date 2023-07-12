@@ -12,17 +12,13 @@ import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const SideBar = ({ children }) => {
+  
     const navigate = useNavigate();
 
     const handleLogout = async () => {
         try {
-            // Make a GET request to perform logout
-            await axios.post('https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/logout');
-
-            // After successful logout, redirect to the login page
+            await axios.post('https://8080-dabaceabfbbcfbfbdcabfdecaedefadebea.project.examly.io/logout');
             navigate('/');
-
-            // Disable back button to prevent navigating back to the main content
             window.history.pushState(null, document.title, window.location.href);
             window.addEventListener('popstate', function (event) {
                 window.history.pushState(null, document.title, window.location.href);
@@ -93,17 +89,7 @@ const SideBar = ({ children }) => {
             <div className="sidebar" id='sidebar'>
                 <div className='top_section'>
                     <div className="nav-footer">
-                        <button onClick={handleLogout}
-                            style={{
-                                width: "150px",
-                                height: "40px",
-                                margin: 10,
-                                backgroundColor: "#980000",
-                                color: "#fff",
-                                cursor: "pointer",
-                                borderColor: "#980000",
-                                fontWeight: "bold"
-                            }}>
+                        <button onClick={handleLogout}>
                             LOGOUT
                         </button>
                     </div>
