@@ -2,14 +2,16 @@ import React from 'react'
 import Header from '../NavBar/Header';
 import '../NavBar/NavBar.css';
 import SideBar from '../NavBar/SideBar';
+import Table from './Table'
+import Form from './Form'
 
 const Goals = () => {
   return (
     <div>
       <Header />
       <SideBar>
-        {/*Do your code inside the sidebar tag*/}
-        <h1>Goals</h1>
+      <Form/>
+      <Table/>
       </SideBar>
     </div>
   )

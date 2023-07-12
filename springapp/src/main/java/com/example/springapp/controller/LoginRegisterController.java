@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
-@CrossOrigin("https://8081-edbafcdbcfbfbdcabfdecaedefadebea.project.examly.io")
+@CrossOrigin("https://8081-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io")
 public class LoginRegisterController {
 
     @Autowired

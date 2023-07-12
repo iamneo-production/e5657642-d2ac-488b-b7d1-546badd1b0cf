@@ -8,6 +8,7 @@ import Goals from './components/Goals/Goals';
 import Reports from './components/Reports/Reports';
 import Transaction from './components/Transaction/Transaction';
 import Accounts from "./components/Accounts/Accounts";
+import EditGoal from "./components/Goals/EditGoal";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './styles/LoginRegister.css';
 
@@ -16,6 +17,7 @@ function App (){
     <div>
       <BrowserRouter>
         <Routes>
+        <Route exact path="/editgoal/:id" element={<EditGoal />} />
           <Route path={'/home'} element={<Home />} />
           <Route path={'/'} element={<LoginPage />} />
           <Route path={'/register'} element={<RegisterPage />} />
