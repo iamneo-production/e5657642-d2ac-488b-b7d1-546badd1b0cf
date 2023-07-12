@@ -52,15 +52,6 @@ public class GoalController {
                     return goalRepository.save(goal);
                 }).orElseThrow(() -> new GoalNotFoundException(id));
     }
-
-    // @DeleteMapping("/deletegoal/{id}")
-    // String deleteGoal(@PathVariable Long id) {
-    //     if (!goalRepository.existsById(id)) {
-    //         throw new GoalNotFoundException(id);
-    //     }
-    //     goalRepository.deleteById(id);
-    //     return "Goal with id " + id + " has been deleted success.";
-    // }
     @DeleteMapping("/deletegoal/{id}")
     String deleteGoal(@PathVariable Long id){
         goalRepository.deleteById(id);

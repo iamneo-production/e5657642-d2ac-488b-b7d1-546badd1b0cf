@@ -17,8 +17,6 @@ function App (){
     <div>
       <BrowserRouter>
         <Routes>
-        <Route exact path="/editgoal/:id" element={<EditGoal />} />
-          <Route path={'/home'} element={<Home />} />
           <Route path={'/'} element={<LoginPage />} />
           <Route path={'/register'} element={<RegisterPage />} />
           <Route path={'/dashboard'} element={<Home />} />
@@ -28,6 +26,7 @@ function App (){
           <Route path="/goals" element={<Goals />} />
           <Route path="/debts" element={<Debts />} />
           <Route path="/reports" element={<Reports />} />
+          <Route exact path="/editgoal/:id" element={<EditGoal />} />
         </Routes>
       </BrowserRouter>
     </div>
