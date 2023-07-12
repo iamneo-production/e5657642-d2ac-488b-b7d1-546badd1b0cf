@@ -18,7 +18,7 @@ const LoginPage = () => {
     }
 
     useEffect(() => {
-        axios.get("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/user").then((resp) => userdata(resp.data))
+        axios.get("https://8080-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io/user").then((resp) => userdata(resp.data))
             .catch((error) => console.log(error))
     }, [])
 
@@ -28,6 +28,7 @@ const LoginPage = () => {
         const verify = data.find(i =>
             (loginData.Username === i.email && loginData.Password === i.password))
         if (verify) {
+            localStorage.setItem('firstname', verify.firstname);
             n('/dashboard')
         }
         else {
