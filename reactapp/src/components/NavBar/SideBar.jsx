@@ -17,7 +17,7 @@ const SideBar = ({ children }) => {
 
     const handleLogout = async () => {
         try {
-            await axios.post('https://8080-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io/logout');
+            await axios.post('https://8080-febebabeadffbfbcfbfbdcabfdecaedefadebea.project.examly.io/logout');
             navigate('/');
             window.history.pushState(null, document.title, window.location.href);
             window.addEventListener('popstate', function (event) {
