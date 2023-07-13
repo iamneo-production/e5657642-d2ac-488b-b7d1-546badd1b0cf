@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Header from '../NavBar/Header';
-import '../NavBar/NavBar.css';
-import SideBar from '../NavBar/SideBar';
-import { useState, useEffect } from 'react';
 import AccountForm from './AccountForm';
 import DropDownButton from './DropDownButton';
 import './Account.css';
 import Table from './Table';
 import axios from 'axios';
 import base_url from './AccountsApi';
+import '../NavBar/NavBar.css';
+import SideBar from '../NavBar/SideBar';
 
 const Accounts = () => {
   const [accountList, setAccountList] = useState([]);
@@ -28,7 +27,6 @@ const Accounts = () => {
         console.log(error);
         console.log('Error fetching accounts');
       });
-      
   };
 
   const handleAddAccount = (newAccount) => {
@@ -43,7 +41,7 @@ const Accounts = () => {
         console.log(error);
         console.log('Error adding account');
       });
-      window.location.reload(false);
+    window.location.reload(false);
   };
 
   const handleDeleteAccount = () => {
@@ -60,8 +58,9 @@ const Accounts = () => {
           console.log(error);
           console.log('Error deleting account');
         });
-        window.location.reload(false);
+       
     }
+    window.location.reload(false);
   };
 
   const handleSelectAccount = (e) => {
@@ -69,14 +68,11 @@ const Accounts = () => {
     setSelectedAccountIndex(index);
   };
 
-
   return (
     <div>
-      <Header />
+      <Header/>
       <SideBar>
-        {/*Do your code inside the sidebar tag*/}
-        
-        <div className='account-container'>
+      <div className='account-container'>
         <div className='account-title'> ADD NEW ACCOUNT </div>
         <div className='account-wrapper'>
           <AccountForm onAddAccount={handleAddAccount} onDeleteAccount={handleDeleteAccount} />
@@ -93,12 +89,12 @@ const Accounts = () => {
         <Table accountList={accountList} />
       </div>
 
-      <div className="note">
+      {/* <div className="note">
         <i>*Note: You can see only the account details. If you want to see transaction details, go to the dashboard and select an account.</i>
-      </div>
+      </div> */}
       </SideBar>
     </div>
-  )
-}
+  );
+};
 
-export default Accounts
+export default Accounts;

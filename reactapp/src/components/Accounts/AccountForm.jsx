@@ -18,7 +18,7 @@ const AccountForm = ({ onAddAccount, onDeleteAccount }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newAccount = { ...data,balance: getRandomBalance(),userId:getRandomuUserId()};
+    const newAccount = { ...data,balance: getRandomBalance()};
     console.log(newAccount);
     postDatatoServer(newAccount);
     onAddAccount(newAccount);
@@ -28,11 +28,6 @@ const AccountForm = ({ onAddAccount, onDeleteAccount }) => {
       accountType: '',
     });
   };
-  const getRandomuUserId = () =>{
-    const minUserId =1;
-    const maxUserId = 100;
-    return Math.floor(Math.random()*(maxUserId-minUserId+1)+minUserId).toString();
-  }
   const getRandomBalance = () => {
     const minBalance = 1;
     const maxBalance = 1000000;
