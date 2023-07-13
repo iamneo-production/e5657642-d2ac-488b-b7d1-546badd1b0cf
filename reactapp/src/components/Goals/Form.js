@@ -19,7 +19,7 @@ export default function Form() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://8080-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io/goal", goal).then(window.location.reload(true));
+    await axios.post("https://8080-efddfbedcacbcfbfbdcabfdecaedefadebea.project.examly.io/goal", goal).then(window.location.reload(true));
     //window.location.reload(true)
    
   };
