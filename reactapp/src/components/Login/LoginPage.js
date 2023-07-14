@@ -28,7 +28,11 @@ const LoginPage = () => {
         const verify = data.find(i =>
             (loginData.Username === i.email && loginData.Password === i.password))
         if (verify) {
-            localStorage.setItem('firstname', verify.firstname);
+            localStorage.setItem('id', verify.id);
+            localStorage.setItem('firstname',verify.firstname);
+            localStorage.setItem('lastname',verify.lastname);
+            localStorage.setItem('email',verify.email);
+            localStorage.setItem('role',verify.role);
             n('/dashboard')
         }
         else {
