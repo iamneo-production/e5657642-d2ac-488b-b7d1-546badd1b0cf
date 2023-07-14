@@ -68,9 +68,9 @@ const Debts = () => {
       amt = amt - monthly_payoff;
       totalinterest=totalinterest+monthly_interest;
       totalmonths++;
-      if(monthly_payoff===0)
+      if(monthly_payoff<=0)
       {
-        alert("With the amount "+monthly_interest+", You cannot pay off your debt!");
+        alert("You cannot pay off your debt with this minimum amount!");
         setAmount('');
         setDebtname('');
         setInterest('');

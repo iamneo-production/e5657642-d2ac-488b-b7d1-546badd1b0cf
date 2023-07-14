@@ -1,24 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.example.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 6.711 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
-testGetAccountById  Time elapsed: 0.019 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<404>
-	at com.example.springapp.SpringappApplicationTests.testGetAccountById(SpringappApplicationTests.java:46)
-
-testGetBudgetAll  Time elapsed: 0.031 s  <<< FAILURE!
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.897 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
+testGetBudgetAll  Time elapsed: 0.02 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at com.example.springapp.SpringappApplicationTests.testGetBudgetAll(SpringappApplicationTests.java:58)
 
-testGetAccountAll  Time elapsed: 0.01 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<404>
-	at com.example.springapp.SpringappApplicationTests.testGetAccountAll(SpringappApplicationTests.java:34)
-
-testGetBudgetById  Time elapsed: 0.009 s  <<< FAILURE!
+testGetBudgetById  Time elapsed: 0.006 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<404>
 	at com.example.springapp.SpringappApplicationTests.testGetBudgetById(SpringappApplicationTests.java:70)
-
-test_case2  Time elapsed: 0.004 s  <<< FAILURE!
-java.lang.AssertionError
-	at com.example.springapp.SpringappApplicationTests.test_case2(SpringappApplicationTests.java:114)
 

@@ -1,10 +1,14 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/AccountModel.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/AccountController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/LoginRegisterRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/LoginRegisterModel.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/services/DebtsServices.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/GoalController.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/AccountRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/DebtsController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Goal.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/services/AccountServices.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/GoalRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/exception/GoalNotFoundException.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/DebtsRepository.java
