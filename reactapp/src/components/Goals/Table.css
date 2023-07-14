@@ -45,14 +45,14 @@
     box-sizing: border-box;
     font-weight: bold;
     color: black;
-    border-color: rgb(12, 12, 12);
+    /* border-color: rgb(12, 12, 12); */
     border: 0.1pc solid;
     border-collapse: collapse;
   }
   
   .addForm {
-    border: 2px solid black;
-    background-color: white;
+    /* border: 2px solid black; */
+    background-color: rgb(255, 255, 255,0.7);
     margin-left: 2vh; /* Converted to vh */
     margin-right: 3vh; /* Converted to vh */
     padding: 1.5%;
@@ -68,7 +68,7 @@
   .addForm button {
     color: aliceblue;
     font-weight: bold;
-    background-color: orange;
+    background-color: rgb(94, 178, 58);
     border-radius: 5px; /* Converted to vh */
     padding: 0.1vh 0.1vh 0.1vh 0.1vh; /* Converted to vh */
     width: 10%;
@@ -80,7 +80,7 @@
   }
   .addForm button:hover{
     transition: 0.4s;
-    background-color: rgb(243, 203, 129);
+    background-color: rgb(112, 208, 71);
     cursor: pointer;
   }
   
@@ -115,7 +115,7 @@
   }
   .edit{
     width: 15vh;
-    height: 5vh;
+    height: 2vh;
     margin-left: 3vh;
     background-color: rgb(39, 93, 240);
     color: white;
@@ -126,6 +126,7 @@
     padding-bottom: 1vh;
     padding-left: 3vh;
     padding-right: 3vh;
+    font-family: 'Lucida Sans';
   }
   .edit:hover{
     cursor: pointer;
@@ -143,6 +144,7 @@
     border: none;
     font-weight: bold;
     margin-left: 1vh;
+    font-family: 'Lucida Sans';
  }
  .delete:hover{
     transition: 0.4s;
@@ -155,7 +157,14 @@
     background-color: rgb(251, 147, 144);
     cursor: pointer;
  }
- 
+
+ #formtext{
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-family: 'Lucida Sans';
+ }
+
  
  
  

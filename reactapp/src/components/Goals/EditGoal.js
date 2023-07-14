@@ -36,12 +36,12 @@ function EditGoal() {
   
     const onSubmit = async (e) => {
       e.preventDefault();
-      await axios.put(`https://8080-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io/editgoal/${id}`, goal)
+      await axios.put(`https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/editgoal/${id}`, goal)
       navigate("/goals");
     };
   
     const loadGoal = async () => {
-    const result = await axios.get(`https://8080-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io/goal/${id}`)
+    const result = await axios.get(`https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/goal/${id}`)
     setGoal(result.data);
     };
   
@@ -50,21 +50,21 @@ function EditGoal() {
       <Header />
       <SideBar>
         <form className='addForm' onSubmit={(e)=>onSubmit(e)}>
-        <h1>Edit  GOAL</h1>
-         <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="goalname" 
+        <h1 style={{fontFamily:'Lucida Sans'}}>UPDATE GOAL</h1>
+         <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="goalname" 
           value={goalname}
          onChange={(e) => onInputChange(e)}/>
-         <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="description" 
+         <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="description" 
           value={description}
          onChange={(e) => onInputChange(e)}/>
-         <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="targetamount"
+         <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="targetamount"
            value={targetamount}
           onChange={(e) => onInputChange(e)}/>
-         <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="currentamount"
+         <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="currentamount"
            value={currentamount}
           onChange={(e) => onInputChange(e)}/>
-         <button type="submit"  style={{marginLeft:'13%'}}>Done</button>
-         <button type="cancel" onClick={navigateToGoals} style={{marginLeft:'10%',backgroundColor:'red'}}>cancel</button>
+         <button type="submit"  style={{marginLeft:'13%',fontFamily:'Lucida Sans'}}>DONE</button>
+         <button type="cancel" onClick={navigateToGoals} style={{marginLeft:'10%',backgroundColor:'rgb(216, 15, 8)',fontFamily:'Lucida Sans'}}>CANCEL</button>
          
            
      </form>

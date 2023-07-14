@@ -20,11 +20,11 @@ function Table() {
     },[]);
 
     const loadGoals=async()=>{
-        const result=await axios.get("https://8080-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io/goals");
+        const result=await axios.get("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/goals");
         setGoals(result.data);
     };
     const deleteGoal = async (id) => {
-        await axios.delete(`https://8080-edbbaddbfdbcfbfbdcabfdecaedefadebea.project.examly.io/deletegoal/${id}`);
+        await axios.delete(`https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/deletegoal/${id}`);
         loadGoals();
       };
     return(
@@ -40,7 +40,7 @@ function Table() {
                     <th>Current Amount</th>
                     <th>Status</th>
                     <th>Delete</th>
-                    <th>Edit</th>
+                    <th>Update</th>
                 </thead>
                 {
                     
