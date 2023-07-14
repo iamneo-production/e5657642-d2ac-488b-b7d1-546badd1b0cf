@@ -19,9 +19,14 @@ export default function Form() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/goal", goal).then(window.location.reload(true));
-    //window.location.reload(true)
-   
+    if (String(goalname).trim() === ''||String(description).trim() === ''||String(targetamount).trim() === ''||String(currentamount).trim() === '') {
+      alert('Please enter all the entries!');
+    } 
+    else{
+    e.preventDefault();
+    await axios.post("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/goal", goal);
+    window.location.reload(false);
+    }
   };
 
   return (
