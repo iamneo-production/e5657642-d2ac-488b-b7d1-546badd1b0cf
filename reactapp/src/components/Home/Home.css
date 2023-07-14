@@ -1,0 +1,114 @@
+.dashboardButton{
+    position: absolute;
+    background-color: rgb(39, 93, 240);
+    width: 27vh;
+    height: 7vh;
+    color: white;
+    font-size: 3vh;
+    border-radius: 2vh;
+    border: none;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 1.5vh;
+    margin-top: 2vh;
+    margin-left: 6vh;
+  }
+  .dashboardButton:hover {
+    background-color: #1a73e8;
+  }
+  .home-table {
+    position:absolute;
+    width: 140vh;
+    margin-top:55vh;
+    margin-left:6vh;
+    font-family:'Lucida Sans';
+    font-size: medium;
+  }
+  .home-table th{
+    height: 4vh;
+  }
+  .home-table td{
+    height: 3vh;
+  }
+  .user-table{
+    position:absolute;
+    width:140vh;
+    margin-top:13vh;
+    margin-left:6vh;
+  }
+  .user-table td{
+    font-weight: bold;
+    height: auto;
+  }
+  
+  .DeleteUserButton{
+    position:absolute;
+    background-color: rgb(216, 15, 8);
+    height: 7vh;
+    width: 22vh;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2vh;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+    border-radius: 1.5vh;
+    margin-top: 2vh;
+    margin-left: 124vh;
+  
+  }
+  .UpdateUserButton{
+    position:absolute;
+    background-color: rgb(94, 178, 58);
+    height: 7vh;
+    width: 22vh;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2vh;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+    border-radius: 1.5vh;
+    margin-top: 2vh;
+    margin-left: 98vh;
+  
+  }
+  
+  .inputField{
+    width:25vh;
+    height:1vh;
+    border:none;
+    justify-content: center;
+    font-family: 'Lucida Sans';
+    font-size: 1rem;
+    padding-top: 0vh;
+  }
+  .SaveButton {
+    background-color: rgb(39, 93, 240);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 46vh;
+    margin-left: 124vh;
+    position:absolute;
+    
+    height: 7vh;
+    width: 22vh;
+    color: white;
+    font-size: 1rem;
+    border-radius: 2vh;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+    border-radius: 1.5vh;
+  }
+  
+  .SaveButton:hover {
+    background-color: #1a73e8;
+  }
+  
+  .SaveButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
