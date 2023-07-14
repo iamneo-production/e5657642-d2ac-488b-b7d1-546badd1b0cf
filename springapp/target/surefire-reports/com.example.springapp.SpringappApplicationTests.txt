@@ -1,28 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.example.springapp.SpringappApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 9.212 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
-testGetGoalById  Time elapsed: 0.222 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<401>
-	at com.example.springapp.SpringappApplicationTests.testGetGoalById(SpringappApplicationTests.java:94)
-
-testGetAccountById  Time elapsed: 0.081 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<401>
-	at com.example.springapp.SpringappApplicationTests.testGetAccountById(SpringappApplicationTests.java:46)
-
-testGetBudgetAll  Time elapsed: 0.019 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<401>
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.897 s <<< FAILURE! - in com.example.springapp.SpringappApplicationTests
+testGetBudgetAll  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
 	at com.example.springapp.SpringappApplicationTests.testGetBudgetAll(SpringappApplicationTests.java:58)
 
-testGetGoalAll  Time elapsed: 0.021 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<401>
-	at com.example.springapp.SpringappApplicationTests.testGetGoalAll(SpringappApplicationTests.java:82)
-
-testGetAccountAll  Time elapsed: 0.057 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<401>
-	at com.example.springapp.SpringappApplicationTests.testGetAccountAll(SpringappApplicationTests.java:34)
-
-testGetBudgetById  Time elapsed: 0.017 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<401>
+testGetBudgetById  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
 	at com.example.springapp.SpringappApplicationTests.testGetBudgetById(SpringappApplicationTests.java:70)
 
