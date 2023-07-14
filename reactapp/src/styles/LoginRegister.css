@@ -1,0 +1,240 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    position: fixed;
+}
+
+@media screen and (max-width:3000px) {
+    .login {
+        margin: auto;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 60%;
+        padding: 2%;
+        margin-top: 5%;
+        margin-bottom: 2%;
+        padding-bottom: 7%;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 10px;
+    }
+
+    form #button2 {
+        margin-top: 25px;
+        background-color: rgb(45, 45, 255);
+        color: white;
+        padding: 7px 13px;
+        outline: none;
+        margin-left: 1vh;
+        margin-right: 3vh;
+        border: none;
+        width: 19.5vh;
+        height: 5vh;
+        border-radius: 10px;
+    }
+
+    .register {
+        margin: auto;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+        font-size: 1em;
+    }
+
+    .bgcolor {
+        background: linear-gradient(to bottom, rgb(88, 88, 214), lightblue);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+
+    }
+
+    #password-container2 {
+        width: 80.5%;
+        padding-bottom: 1vh;
+    }
+
+    .Letsgearup {
+        color: rgb(9, 68, 146);
+        font-size: 1.5em;
+        font-style: bold;
+        font-weight: 700;
+        margin-left: -3vh;
+
+    }
+}
+
+
+#LoginButton:hover {
+    background-color: rgb(95, 144, 249);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+form #button2:hover {
+    background-color: rgb(95, 144, 249);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+form #button1:hover {
+    background-color: red;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.header {
+    font-size: 2.2em;
+    margin: auto;
+    font-weight: 700;
+    color: white;
+    font-family: 'Times New Roman';
+}
+
+.section2 {
+    margin: auto;
+}
+
+.login-heading {
+    margin-top: 20%;
+}
+
+.line {
+    width: 50%;
+    color: 1px solid white;
+    margin-top: 2%;
+    border-top: 1px solid white;
+}
+
+
+
+#link {
+    color: black;
+
+}
+
+#Username {
+    padding: 18px;
+    width: 70%;
+    height: 1vh;
+    border-bottom: 1.5px solid rgb(45, 88, 219);
+}
+
+#Password {
+
+    border-bottom: 1.5px solid rgb(45, 88, 219);
+    padding: 18px;
+    width: 70%;
+    height: 1vh;
+
+}
+
+
+#LoginButton {
+    height: 5vh;
+    width: 18vh;
+    border: none;
+    margin-top: 2.3%;
+    border-radius: 10px;
+    background-color: rgb(61, 61, 242);
+    text-align: center;
+    color: white;
+}
+
+
+b {
+    font-size: 1.5em;
+}
+
+.box1 {
+
+    margin-right: 100px;
+}
+
+.container2 {
+    width: 100%;
+    margin: auto;
+
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.box2 {
+    margin: auto;
+    width: 45vh;
+    padding-top: 3vh;
+    padding-bottom: 4vh;
+    border: 2px black;
+    border-radius: 10px;
+    /* box-shadow: 8px 7px 3px rgb(145, 147, 147); */
+    background-color: rgb(243, 245, 247, 0.8);
+
+}
+
+.box2 b {
+    font-family: sans-serif;
+    color: rgb(9, 68, 146);
+}
+
+.box2 input {
+    margin-top: 4%;
+    height: 4.5vh;
+    border-bottom: 1.5px solid rgb(45, 88, 219);
+}
+
+input {
+    width: 80%;
+    margin-top: 10px;
+    padding: 7px;
+    outline: none;
+    border: none;
+}
+
+form #button1 {
+    margin-top: 25px;
+    background-color: rgb(211, 6, 6);
+    color: white;
+    padding: 7px 13px;
+    outline: none;
+    margin-left: 3vh;
+    margin-right: 1vh;
+    border: none;
+    width: 16.5vh;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+
+    margin-left: 65%;
+    margin-top: -8%;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.password-input {
+    padding-right: 60px;
+}
+
+.toggle-password-button {
+    position: absolute;
+    right: 5vh;
+    top: 70%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+#reenter-container2 {
+    margin-top: -3vh;
+}
+
+#register-button {
+    color: rgb(6, 96, 251);
+}
