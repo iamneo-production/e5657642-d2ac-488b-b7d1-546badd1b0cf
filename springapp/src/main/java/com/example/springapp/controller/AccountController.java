@@ -32,8 +32,8 @@ public class AccountController {
 
  // Retrieving accounts by ID
  @GetMapping("/accounts/id")
- public List<AccountModel> getAccountById(@RequestParam("id") long id) {
-     return this.accountsService.getAccountById(id);
+ public Optional<AccountModel> getAccountById(@RequestParam("accountId")Integer accountId) {
+     return this.accountsService.getAccountById(accountId);
  }
 
  // Retrieving accounts by userId
@@ -56,9 +56,9 @@ public class AccountController {
 
  // Deleting an account by ID
  @DeleteMapping("/accounts")
- public ResponseEntity<HttpStatus> deleteAccountById(@RequestParam("id") long id) {
+ public ResponseEntity<HttpStatus> deleteAccountById(@RequestParam("accountId") Integer accountId) {
      try {
-         this.accountsService.deleteAccount(id);
+         this.accountsService.deleteAccount(accountId);
          return new ResponseEntity<>(HttpStatus.OK);
      } catch (Exception e) {
          return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

@@ -40,8 +40,8 @@ const Table = () => {
         </thead>
         <tbody>
           {accountList.map((account) => (
-            <tr key={account.id}>
-              <td>{account.id}</td>
+            <tr key={account.accountId}>
+              <td>{account.accountId}</td>
               <td>{account.accountName}</td>
               <td>{account.accountType}</td>
               <td>{userData}</td>

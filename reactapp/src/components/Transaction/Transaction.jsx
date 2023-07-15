@@ -3,7 +3,7 @@ import Header from '../NavBar/Header';
 import '../NavBar/NavBar.css';
 import SideBar from '../NavBar/SideBar';
 import './Transaction.css';
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 

@@ -13,7 +13,7 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 	List<Transaction> findByAccount(AccountModel account);
 	@Query("SELECT t FROM Transaction t WHERE t.account.id = :accountId ORDER BY t.date DESC")
-	List<Transaction> getAllTransactionsByAccountIdOrderByDateDesc(@Param("accountId") int id);
+	List<Transaction> findByAccountAccountIdOrderByDateDesc(@Param("accountId") int id);
 
 }
 
