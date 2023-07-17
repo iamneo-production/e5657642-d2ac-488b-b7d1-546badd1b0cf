@@ -65,7 +65,7 @@ const HomeUserTable = ({isUserEditing,onInputChange}) => {
             // Check if email already exists in the database
             const responseNew = await axios.get(`${base_url}/user`);
             const users = responseNew.data;
-            const emailExists = users.some((user) => user.email === userFormData.email);
+            const emailExists = users.some((user) => user.email === userFormData.email && user.email !== localStorage.email);
             console.log(userFormData.email);
             if (emailExists) {
                 window.alert("Email already exists. Please use a different email.");
