@@ -68,6 +68,15 @@ const Debts = () => {
       amt = amt - monthly_payoff;
       totalinterest=totalinterest+monthly_interest;
       totalmonths++;
+      if(monthly_payoff<=0)
+      {
+        alert("You cannot pay off your debt with this minimum amount!");
+        setAmount('');
+        setDebtname('');
+        setInterest('');
+        setMin('');
+        return;
+      }
     }
     setTotal_interest(totalinterest);
     setTotal_months(totalmonths);
@@ -105,7 +114,7 @@ const Debts = () => {
       total_interest: total_interest.toFixed(2),
       total_interest_amount: total_interest_amount.toFixed(2),
       total_months: total_months,
-      suggestions: 'At first ' + initialpay_month + ' months pay '+ min + ' ,so totally '+ total_initial_pay + ' and at ' +total_months+ 'th month, pay ' + balancepay.toFixed(2)
+      suggestions: 'At first ' + initialpay_month + ' months pay '+ min + ' ,so totally '+ total_initial_pay + ' and at the month of ' + total_months +' ,pay ' + balancepay.toFixed(2)
     };
 
     setAmount('');
