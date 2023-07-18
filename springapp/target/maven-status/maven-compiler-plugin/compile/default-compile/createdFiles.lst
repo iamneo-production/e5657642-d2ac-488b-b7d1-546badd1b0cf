@@ -1,0 +1,6 @@
+com/example/springapp/SpringappApplication.class
+com/example/springapp/exception/GoalNotFoundException.class
+com/example/springapp/exception/GoalNotFoundAdvice.class
+com/example/springapp/repository/GoalRepository.class
+com/example/springapp/model/Goal.class
+com/example/springapp/controller/GoalController.class
