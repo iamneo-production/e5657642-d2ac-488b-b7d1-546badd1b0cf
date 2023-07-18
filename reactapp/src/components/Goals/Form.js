@@ -19,27 +19,32 @@ export default function Form() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/goal", goal).then(window.location.reload(true));
-    //window.location.reload(true)
-   
+    if (String(goalname).trim() === ''||String(description).trim() === ''||String(targetamount).trim() === ''||String(currentamount).trim() === '') {
+      alert('Please enter all the entries!');
+    } 
+    else{
+    e.preventDefault();
+    await axios.post("https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/goal", goal);
+    window.location.reload(false);
+    }
   };
 
   return (
     <form className='addForm' onSubmit={(e)=>onSubmit(e)}>
-           <h1>SET NEW GOAL</h1>
-            <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="goalname" 
+           <h1 style={{fontFamily:'Lucida Sans'}}>SET NEW GOAL</h1>
+            <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%',}} name="goalname" 
             placeholder="Goal Name" value={goalname}
             onChange={(e) => onInputChange(e)}/>
-            <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="description" 
+            <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="description" 
             placeholder="Description" value={description}
             onChange={(e) => onInputChange(e)}/>
-            <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="targetamount"
+            <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="targetamount"
              placeholder="Target Amount" value={targetamount}
              onChange={(e) => onInputChange(e)}/>
-            <input type="text" style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="currentamount"
+            <input type="text" id='formtext' style={{height:'4vh',backgroundColor:'aliceblue',marginBottom:'2vh',marginLeft:'13%'}} name="currentamount"
              placeholder="Current Amount" value={currentamount}
              onChange={(e) => onInputChange(e)}/>
-            <button type="submit"  style={{marginLeft:'13%'}}>Set New Goal</button>
+            <button type="submit"  style={{marginLeft:'13%',fontFamily:'Lucida Sans'}}>SET GOAL</button>
             
         </form>
   );
