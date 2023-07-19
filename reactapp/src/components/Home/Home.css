@@ -1,8 +1,11 @@
+/* .HomeContainer{
+  width:85%;
+} */
 .dashboardButton{
     position: absolute;
     background-color: rgb(39, 93, 240);
-    width: 27vh;
-    height: 7vh;
+    width: 14%;
+    height: 6%;
     color: white;
     font-size: 3vh;
     border-radius: 2vh;
@@ -19,8 +22,8 @@
   }
   .home-table {
     position:absolute;
-    width: 140vh;
-    margin-top:55vh;
+    width: 75%;
+    margin-top:24.2%;
     margin-left:6vh;
     font-family:'Lucida Sans';
     font-size: medium;
@@ -33,20 +36,32 @@
   }
   .user-table{
     position:absolute;
-    width:140vh;
-    margin-top:13vh;
+    width:75%;
+    margin-top:6%;
     margin-left:6vh;
+    font-family: 'Lucida Sans';
+    font-size: 1rem;
   }
   .user-table td{
-    font-weight: bold;
+    /* font-weight: bold; */
     height: auto;
+    padding:1%;
+    background-color: rgb(255, 255, 255,0.7); 
+    
+  }
+
+  .user-table th{
+    background-color: rgb(255, 255, 255,0.7); 
+    font-weight: bold;
+    color: black;
+border-color: black;
   }
   
   .DeleteUserButton{
     position:absolute;
     background-color: rgb(216, 15, 8);
-    height: 7vh;
-    width: 22vh;
+    height: 6%;
+    width: 12%;
     color: white;
     font-size: 1rem;
     border: none;
@@ -55,14 +70,14 @@
     justify-content: center;
     border-radius: 1.5vh;
     margin-top: 2vh;
-    margin-left: 124vh;
+    margin-left: 65%;
   
   }
   .UpdateUserButton{
     position:absolute;
     background-color: rgb(94, 178, 58);
-    height: 7vh;
-    width: 22vh;
+    height: 6%;
+    width: 12%;
     color: white;
     font-size: 1rem;
     border: none;
@@ -71,30 +86,32 @@
     justify-content: center;
     border-radius: 1.5vh;
     margin-top: 2vh;
-    margin-left: 98vh;
+    margin-left: 50%;
   
   }
   
   .inputField{
+    background-color: aliceblue;
     width:25vh;
     height:1vh;
     border:none;
     justify-content: center;
     font-family: 'Lucida Sans';
     font-size: 1rem;
-    padding-top: 0vh;
+    border-bottom: 1px solid black;
   }
+  
   .SaveButton {
     background-color: rgb(39, 93, 240);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin-top: 46vh;
-    margin-left: 124vh;
+    margin-top: 2vh;
+    margin-left: 39%;
     position:absolute;
     
-    height: 7vh;
-    width: 22vh;
+    height:6%;
+    width: 8%;
     color: white;
     font-size: 1rem;
     border-radius: 2vh;

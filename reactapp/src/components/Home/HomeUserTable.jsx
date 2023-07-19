@@ -17,7 +17,7 @@ const HomeUserTable = ({isUserEditing,onInputChange}) => {
   //fetching userData
     useEffect(() => {
         fetchUserData();
-        const storedid = localStorage.getItem('id');
+        //const storedid = localStorage.getItem('id');
     }, []);
 
     const fetchUserData = () => {
@@ -99,15 +99,16 @@ const HomeUserTable = ({isUserEditing,onInputChange}) => {
         <table className="user-table">
             <tbody>
                 <tr>
-                    <td>User ID</td>
+                    <th>User ID</th>
                     <td>
                         {userData.id}
                     </td>
                 </tr>
                 <tr>
-                    <td>First Name</td>
+                    <th>First Name</th>
                     <td>{isUserEditing ? (
                         <input
+                            className='inputField'
                             type="text"
                             name="firstname"
                             value={userFormData.firstname}
@@ -119,10 +120,11 @@ const HomeUserTable = ({isUserEditing,onInputChange}) => {
                     </td>
                 </tr>
                 <tr>
-                    <td>Last Name</td>
+                    <th>Last Name</th>
                     <td>
                         {isUserEditing ? (
                         <input
+                        className='inputField'
                             type="text"
                             name="lastname"
                             value={userFormData.lastname}
@@ -134,10 +136,11 @@ const HomeUserTable = ({isUserEditing,onInputChange}) => {
                     </td>
                 </tr>
                 <tr>
-                    <td>Email</td>
+                    <th>Email</th>
                     <td>
                         {isUserEditing ? (
                         <input
+                        className='inputField'
                             type="email"
                             name="email"
                             value={userFormData.email}
@@ -149,10 +152,11 @@ const HomeUserTable = ({isUserEditing,onInputChange}) => {
                     </td>
                 </tr>
                 <tr>
-                    <td>Role</td>
+                    <th>Role</th>
                     <td>
                         {isUserEditing ? (
                         <input
+                        className='inputField'
                             type="text"
                             name="role"
                             value={userFormData.role}

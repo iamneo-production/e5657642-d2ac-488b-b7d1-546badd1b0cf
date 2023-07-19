@@ -69,6 +69,7 @@ const Home = () => {
 
       <Header />
       <SideBar>
+        <div className="HomeContainer">
       {/*add bank account, user details, update user button */}
       <div>
         <Link to="/accounts">
@@ -87,7 +88,7 @@ const Home = () => {
 
       {/* rendering account table connected to the accounts page*/}
       <HomeAccountTable/>
-
+      </div>
       </SideBar>
 
     </div>
