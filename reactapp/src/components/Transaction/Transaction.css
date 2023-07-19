@@ -1,82 +1,29 @@
-*{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    @media (min-width: 5in) and (max-width: 16in) {
-  .transactions-by-account {
-    margin-top: 30px;
-    font-size: medium;
-    text-align: center;
-    margin-left: 20%;
-    
-  
-  }
-  .select-container {
-    margin-left: 20%;
-    border-radius: 2px;
-    width: fit-content ;
-  }
-  
-  .label {
-    font-size: 2vh;
-    margin-left: 20%;
-  }
-  
-  .select {
-    padding: 3px;
-    font-size: 2vh;
-    margin-left: 20%;
-  }
-  
-  
-  table {
-      height: 10%;
-      text-align: justify;
-      border-collapse: collapse;
-      border: 1px solid black;
-      margin-left: 10%;
-      margin-top: 5%;
-      width: 130vh;
-    
-  }
-  th {
-    padding: 1%;
-      border: 1px solid white;
-      width: 10%;
-      justify-content: center;
-      color: white;
-      text-transform: uppercase;
-      text-align: justify;
-      background-color:rgb(16, 94, 133);
-      font-size: medium;
-  }
-  td {
-    padding: 1%;
-      border: 1px solid black;
-      width: 10%;
-      text-align: justify;
-      background-color:white;
-      justify-content: center;
-      font-size: 2vh;
-  
-  }
-  .button-container button {
-    background-color: rgb(4,121,142);
-    padding: 5px 10px;
-    position: absolute;
-    left: 53%; 
-    top: 75%;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    height: 5vh;
-    font-size: 2vh;
-  }
-  .button-container button:hover {
-    background-color: rgb(38,188,215);
-    transition: 0.4s;
-    cursor: pointer;
-  }
-    }
-  
-  
-  
+#dropdown-account{
+  position: absolute;
+  background-color: hsl(0, 4%, 76%);
+  outline: none;
+  padding: 0.8%;
+  font-family: 'Lucida Sans';
+  font-size: 1rem;
+  border-radius:1.5vh;
+}
+.showtrans{
+  margin-left: 20%;
+  height: 5.2vh;
+  width: 20vh;
+  background-color: rgb(39, 93, 240);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 2vh;
+  font-family: 'Lucida Sans';
+}
+.showtrans:hover{
+  background-color: rgb(92, 135, 253);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.account_detail td{
+  padding: 0%;
+}
