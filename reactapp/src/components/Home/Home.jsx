@@ -40,9 +40,11 @@ const Home = () => {
     };
     //handling delete user
     const handleDeleteClick = () => {
+      const storedUserID = localStorage.getItem('id');
       axios
         //passing user data
-        .delete(`${base_url}/user/${userData}`)
+        
+        .delete(`${base_url}/user/${storedUserID}`)
         .then((response) => {
           alert('User deleted successfully.');
           // Redirect to the login page
