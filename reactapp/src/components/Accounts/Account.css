@@ -1,0 +1,256 @@
+/* @media (min-width: 5in) and (max-width: 20in) { */
+  /* CSS rules for screens between 10 inches and 20 inches */
+
+  .accountId {
+    width: 28%;
+    position: absolute;
+    font-size: 1rem;
+    height: 3vh;
+    background-color: aliceblue;
+    outline: none; 
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 4.7vh;
+    border-radius: 0;
+    font-family: 'Lucida Sans';
+    margin-left: 4vh;
+
+  }
+
+  .accountName {
+    position: absolute;
+    width: 28%;
+    font-size: 1rem;
+    height: 3vh;
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 4.7vh;
+    border-radius: 0;
+    font-family: 'Lucida Sans';
+    margin-left: 43vh;
+
+  }
+
+  .accountType {
+    width: 28%;
+    position: absolute;
+    font-size: 1rem;
+    height: 5vh;
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 4.7vh;
+    border-radius: 0;
+    font-family: 'Lucida Sans';
+    margin-left: 82vh;
+
+  }
+
+  .addAccountButton {
+    position: absolute;
+    background-color: rgb(39, 93, 240);
+    width: 19vh;
+    height: 6vh;
+    color: white;
+    font-size: 2vh;
+    border-radius: 2vh;
+    border: none;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 1.5vh;
+    margin-top: 13vh;
+    margin-left: 98vh;
+
+  }
+
+  .addAccountButton:hover {
+    background-color: rgb(92, 135, 253);
+    cursor: pointer;
+    transition: 0.4s;
+
+  }
+
+  .deleteAccountButton {
+    position: absolute;
+    background-color: rgb(216, 15, 8);
+    width: 19vh;
+    height: 6vh;
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
+    font-family: 'Lucida Sans';
+    border-radius: 1.5vh;
+    border: none;
+    align-items: center;
+    margin-top: 24vh;
+    margin-left: 98vh;
+
+  }
+
+  .deleteAccountButton:hover {
+    transition: 0.4s;
+    background-color: rgb(219, 88, 84);
+    cursor: pointer;
+
+  }
+
+  .note {
+    position: absolute;
+    margin-left: 8vh;
+    margin-top:50vh;
+    font-size: 0.84rem;
+    font-family: 'Lucida Sans';
+
+  }
+
+  .dropdownSelect {
+    position: absolute;
+    background-color: hsl(0, 4%, 76%);
+    outline: none;
+    padding: 2vh;
+    font-family: 'Lucida Sans';
+    font-size: 1rem;
+    margin-top:5vh;
+    left:0.2vh;
+    border-radius:1.5vh;
+
+  }
+
+  /* For upper Rectangle */
+  .account-container {
+    position: relative;
+    width: 119vh;
+    height: 20vh;
+    background-color: rgb(255, 255, 255, 0.7);
+    margin: 2vh;
+    left: 6vh;
+    padding: 2vh;
+    font-family: 'Lucida Sans';
+  }
+
+  .account-title {
+    position: absolute;
+    top: 2vh;
+    left: 3vh;
+    font-size: 1rem;
+    color: green;
+    font-weight: bold;
+  }
+
+  .account-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+
+
+.account-table {
+  position:absolute;
+  width: 123vh;
+  margin-top:11vh;
+  margin-left:8vh;
+}
+
+@media screen and (max-height: 768px) {
+  .account-container {
+    position: relative;
+    width: 145vh;
+    height: 20vh;
+    background-color: rgb(255, 255, 255, 0.7);
+    margin: 2vh;
+    padding: 2vh;
+    font-family: 'Lucida Sans';
+  }
+
+  .account-table {
+    position:absolute;
+    width: 150vh;
+    margin-top:11vh;
+    margin-left:8vh;
+  }
+  .addAccountButton {
+    position: absolute;
+    background-color: rgb(39, 93, 240);
+    width: 19vh;
+    height: 6vh;
+    color: white;
+    font-size: 2vh;
+    border-radius: 2vh;
+    border: none;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 1.5vh;
+    margin-top: 13vh;
+    margin-left: 123vh;
+
+  }
+
+  .deleteAccountButton {
+    position: absolute;
+    background-color: rgb(216, 15, 8);
+    width: 19vh;
+    height: 6vh;
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
+    font-family: 'Lucida Sans';
+    border-radius: 1.5vh;
+    border: none;
+    align-items: center;
+    margin-top: 25vh;
+    margin-left: 123vh;
+  }  
+  .accountId {
+    width: 28%;
+    position: absolute;
+    font-size: 1rem;
+    height: 3vh;
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 4.7vh;
+    border-radius: 0;
+    font-family: 'Lucida Sans';
+    margin-left: 4vh;
+
+  }
+
+  .accountName {
+    position: absolute;
+    width: 28%;
+    font-size: 1rem;
+    height: 3vh;
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 4.7vh;
+    border-radius: 0;
+    font-family: 'Lucida Sans';
+    margin-left: 52vh;
+
+  }
+
+  .accountType {
+    width: 28%;
+    position: absolute;
+    font-size: 1rem;
+    height: 5.5vh;
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 4.7vh;
+    border-radius: 0;
+    font-family: 'Lucida Sans';
+    margin-left: 101vh;
+
+  }
+}
