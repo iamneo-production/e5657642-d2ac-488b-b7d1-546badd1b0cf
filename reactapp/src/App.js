@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import LoginPage from "./components/Login/LoginPage";
+import RegisterPage from "./components/Login/RegisterPage";
+import Home from './components/Home/Home';
+import Budget from './components/Budget/Budget';
+import Debts from './components/Debts/Debts';
+import Goals from './components/Goals/Goals';
+import Reports from './components/Reports/Reports';
+import Transaction from './components/Transaction/Transaction';
+import Accounts from "./components/Accounts/Accounts";
+import EditGoal from "./components/Goals/EditGoal";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import './styles/LoginRegister.css';
 
-function App() {
+function App (){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path={'/'} element={<LoginPage />} />
+          <Route path={'/register'} element={<RegisterPage />} />
+          <Route path={'/dashboard'} element={<Home />} />
+          <Route path="/budget" element={<Budget />} />
+          <Route path="/transaction" element={<Transaction />} />
+          <Route path="/accounts" element={<Accounts />} />
+          <Route path="/goals" element={<Goals />} />
+          <Route path="/debts" element={<Debts />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route exact path="/editgoal/:id" element={<EditGoal />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;
