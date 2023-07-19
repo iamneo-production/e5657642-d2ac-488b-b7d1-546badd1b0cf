@@ -24,7 +24,7 @@ export default function Form() {
     } 
     else{
     e.preventDefault();
-    await axios.post("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/goal", goal);
+    await axios.post("https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/goal", goal);
     window.location.reload(false);
     }
   };
