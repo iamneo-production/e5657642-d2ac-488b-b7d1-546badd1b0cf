@@ -1,7 +1,6 @@
 package com.example.springapp.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +18,8 @@ public class AccountServices {
      return accountsDao.findAll();
  }
 
- public Optional<AccountModel> getAccountById(Integer accountId) {
-     return accountsDao.findById(accountId);
+ public List<AccountModel> getAccountById(long id) {
+     return accountsDao.findById(id);
  }
 
  public List<AccountModel> getAccountsByUserId(long userId) {
@@ -35,7 +34,7 @@ public class AccountServices {
      return accountsDao.save(account);
  }
 
- public void deleteAccount(Integer accountId) {
-     accountsDao.deleteById(accountId);
+ public void deleteAccount(long id) {
+     accountsDao.deleteById(id);
  }
 }

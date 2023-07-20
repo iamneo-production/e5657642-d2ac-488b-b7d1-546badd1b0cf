@@ -3,9 +3,9 @@ package com.example.springapp.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.springapp.model.AccountModel;
 
-import java.util.*;
+import java.util.List;
 
-public interface AccountRepository extends JpaRepository<AccountModel,Integer> {
+public interface AccountRepository extends JpaRepository<AccountModel, Long> {
     List<AccountModel> findByUserId(long userId);
-    Optional<AccountModel> findById(Integer accountId);
+    List<AccountModel> findById(long id);
 }

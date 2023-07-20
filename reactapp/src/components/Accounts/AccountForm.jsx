@@ -5,12 +5,12 @@ import base_url from './AccountsApi';
 
 const AccountForm = ({ onAddAccount, onDeleteAccount }) => {
   const [data, setData] = useState({
-    accountId: '',
+    id: '',
     accountName: '',
     accountType: '',
   });
 
-  const { accountId, accountName, accountType } = data;
+  const { id, accountName, accountType } = data;
 
   const onChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -18,7 +18,7 @@ const AccountForm = ({ onAddAccount, onDeleteAccount }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (String(accountId).trim() === ''||String(accountName).trim() === ''||String(accountType).trim() === '') {
+    if (String(id).trim() === ''||String(accountName).trim() === ''||String(accountType).trim() === '') {
       alert('Please enter all the entries!');
     } 
     else{
@@ -27,7 +27,7 @@ const AccountForm = ({ onAddAccount, onDeleteAccount }) => {
     postDatatoServer(newAccount);
     onAddAccount(newAccount);
     setData({
-      accountId: '',
+      id: '',
       accountName: '',
       accountType: '',
     });
@@ -59,8 +59,8 @@ const AccountForm = ({ onAddAccount, onDeleteAccount }) => {
           type="text"
           className="accountId"
           placeholder="Account ID"
-          name="accountId"
-          value={accountId}
+          name="id"
+          value={id}
           onChange={onChange}
         />
         <input

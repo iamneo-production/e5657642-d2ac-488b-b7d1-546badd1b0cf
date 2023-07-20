@@ -7,15 +7,15 @@ import javax.persistence.Id;
 public class AccountModel {
 	
 	@Id
-	private Integer accountId;
+	private long id;
 	private String accountName;
 	private String accountType;
 	private String balance;
 	private long userId;
 	
-	public AccountModel(Integer accountId, String accountName, String accountType, String balance, long userId) {
+	public AccountModel(long id, String accountName, String accountType, String balance, long userId) {
 		super();
-		this.accountId = accountId;
+		this.id = id;
 		this.accountName = accountName;
 		this.accountType = accountType;
 		this.balance = balance;
@@ -27,12 +27,12 @@ public class AccountModel {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Integer getAccountId() {
-		return accountId;
+	public long getId() {
+		return id;
 	}
 
-	public void setAccountId(Integer accountId) {
-		this.accountId = accountId;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getAccountName() {
@@ -69,7 +69,7 @@ public class AccountModel {
 
 	@Override
 	public String toString() {
-		return "Accounts [accountId=" + accountId + ", accountName=" + accountName + ", accountType=" + accountType + ", balance="
+		return "Accounts [id=" + id + ", accountName=" + accountName + ", accountType=" + accountType + ", balance="
 				+ balance + ", userId=" + userId + "]";
 	}
 

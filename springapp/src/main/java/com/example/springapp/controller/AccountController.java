@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 //MyController.java
 @RestController
-@CrossOrigin("https://8081-ffdbbecdfdbcfbfbdcabfdecaedefadebea.project.examly.io/")
+@CrossOrigin("https://8080-ffdbbecdfdbcfbfbdcabfdecaedefadebea.project.examly.io/")
 public class AccountController {
  @Autowired
  private AccountServices accountsService;
@@ -32,8 +32,8 @@ public class AccountController {
 
  // Retrieving accounts by ID
  @GetMapping("/accounts/id")
- public Optional<AccountModel> getAccountById(@RequestParam("accountId")Integer accountId) {
-     return this.accountsService.getAccountById(accountId);
+ public List<AccountModel> getAccountById(@RequestParam("id") long id) {
+     return this.accountsService.getAccountById(id);
  }
 
  // Retrieving accounts by userId
@@ -56,13 +56,12 @@ public class AccountController {
 
  // Deleting an account by ID
  @DeleteMapping("/accounts")
- public ResponseEntity<HttpStatus> deleteAccountById(@RequestParam("accountId") Integer accountId) {
+ public ResponseEntity<HttpStatus> deleteAccountById(@RequestParam("id") long id) {
      try {
-         this.accountsService.deleteAccount(accountId);
+         this.accountsService.deleteAccount(id);
          return new ResponseEntity<>(HttpStatus.OK);
      } catch (Exception e) {
          return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
      }
  }
 }
-

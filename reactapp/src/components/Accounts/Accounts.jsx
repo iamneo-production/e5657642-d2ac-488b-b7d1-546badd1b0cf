@@ -46,9 +46,9 @@ const Accounts = () => {
 
   const handleDeleteAccount = () => {
     if (selectedAccountIndex !== null) {
-      const accountsId = accountList[selectedAccountIndex].accountId;
+      const accountId = accountList[selectedAccountIndex].id;
       axios
-        .delete(`${base_url}/accounts?accountId=${accountsId}`)
+        .delete(`${base_url}/accounts?id=${accountId}`)
         .then((response) => {
           console.log(response);
           console.log('Account deleted successfully');

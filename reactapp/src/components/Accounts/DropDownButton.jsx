@@ -8,7 +8,7 @@ const DropDownButton = ({ accountList, handleSelectAccount, handleDeleteAccount,
       <select className='dropdownSelect' onChange={handleSelectAccount}>
         <option value="">Select Account </option>
         {accountList.map((account, index) => (
-          <option key={index} value={index}>{account.accountId}</option>
+          <option key={index} value={index}>{account.id}</option>
         ))}
       </select>
     </div>
