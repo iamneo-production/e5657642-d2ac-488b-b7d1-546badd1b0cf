@@ -19,6 +19,9 @@ const SideBar = ({ children }) => {
         try {
             await axios.post('https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/logout');
             navigate('/');
+            localStorage.removeItem('id'); 
+            localStorage.removeItem('lastViewedAccountData');
+            localStorage.removeItem('lastViewedAccountTransactions');
             window.history.pushState(null, document.title, window.location.href);
             window.addEventListener('popstate', function (event) {
                 window.history.pushState(null, document.title, window.location.href);

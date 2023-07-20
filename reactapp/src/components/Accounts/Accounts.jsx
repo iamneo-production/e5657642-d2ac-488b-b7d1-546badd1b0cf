@@ -85,7 +85,7 @@ const Accounts = () => {
         />
       </div>
 
-      <div>
+      <div className='accounts-table'>
         <Table accountList={accountList} />
       </div>
 

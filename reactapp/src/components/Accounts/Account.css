@@ -98,14 +98,14 @@
 
   }
 
-  .note {
+  /* .note {
     position: absolute;
     margin-left: 8vh;
     margin-top:50vh;
     font-size: 0.84rem;
     font-family: 'Lucida Sans';
 
-  }
+  } */
 
   .dropdownSelect {
     position: absolute;
@@ -148,13 +148,12 @@
   }
 
 
-
 .account-table {
-  position:absolute;
+  /* position:absolute; */
   width: 123vh;
   margin-top:11vh;
   margin-left:8vh;
-}
+} 
 
 @media screen and (max-height: 768px) {
   .account-container {
@@ -168,10 +167,13 @@
   }
 
   .account-table {
-    position:absolute;
+    /* position:absolute; */
     width: 150vh;
     margin-top:11vh;
     margin-left:8vh;
+  } 
+  .accounts-table{
+    display: flex;
   }
   .addAccountButton {
     position: absolute;
