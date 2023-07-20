@@ -8,7 +8,7 @@ import SideBar from '../NavBar/SideBar';
 import axios from "axios";
 
 const Budget = () => {
-  const API_URL = "https://8080-ffdbbecdfdbcfbfbdcabfdecaedefadebea.project.examly.io/"; // Update the port if necessary
+  const API_URL = "https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io"; // Update the port if necessary
 
   const [users, setUsers] = useState([]);
 
