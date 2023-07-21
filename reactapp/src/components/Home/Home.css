@@ -14,7 +14,9 @@
 }
 
 .dashboardButton:hover {
-  background-color: #1a73e8;
+  background-color: rgb(92, 135, 253);
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .acc-user {
@@ -47,10 +49,8 @@
 }
 
 .user-table td {
-  /* font-weight: bold; */
   height: auto;
-  padding: 1%;
-  background-color: rgb(255, 255, 255, 0.7);
+  background-color: white;
   padding: 0%;
 }
 
@@ -63,7 +63,7 @@
 
 .DeleteUserButton {
   position: absolute;
-  background-color: rgb(216, 15, 8);
+  background-color: rgb(187, 10, 10);
   height: 6%;
   width: 12%;
   color: white;
@@ -74,6 +74,12 @@
   border-radius: 5px;
   margin-top: 2vh;
   margin-left: 65%;
+}
+
+.DeleteUserButton:hover{
+  background-color: rgb(224, 97, 97);
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .UpdateUserButton {
@@ -89,7 +95,12 @@
   border-radius: 5px;
   margin-top: 2vh;
   margin-left: 50%;
+}
 
+.UpdateUserButton:hover{
+  transition: 0.4s;
+  background-color:rgb(112, 208, 71);
+  cursor:pointer;
 }
 
 .inputField {
@@ -121,7 +132,9 @@
 }
 
 .SaveButton:hover {
-  background-color: #1a73e8;
+  background-color: rgb(92, 135, 253);
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .SaveButton:disabled {

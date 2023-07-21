@@ -28,17 +28,18 @@
     /* display: inline-block; */
     padding: 8px 16px; /* Adjust padding values to make the button larger or smaller */
     border-radius: 10px; /* Adjust border-radius to control the roundness of the border */
-    background-color: rgb(191, 144, 0);
+    background-color: rgb(39, 93, 240);
     color: #ffffff; /* Adjust the text color as needed */
-    font-size: 70%; /* Adjust font size to make the text larger or smaller */
+    font-size: 50%; /* Adjust font size to make the text larger or smaller */
     font-family: 'Lucida Sans';
     text-decoration: none;
     border:none;
+    height: 5%;
   }
   .create-budget-button:hover{
     cursor: pointer;
     transition: 0.4s;
-    background-color: rgb(229, 204, 128);
+    background-color: rgb(92, 135, 253);
   }
   /* .estimate-row{
       
@@ -67,10 +68,11 @@
   .income-row input[type="text"] {
     width: 40%; /* Adjust the width using vh */
     height: 50%;
-    border: 1px solid #000; /* Set the border style and color */
+    border-bottom: 1px solid black;
+    /* border: 1px solid #000;  */
     border-radius: 2%;
     text-align: center;
-    font-weight: bold; /* Set the font weight to bold */
+    /* font-weight: bold; Set the font weight to bold */
     /* padding-right: -10%; */
   }
   span{
@@ -82,14 +84,14 @@
     flex-direction: column;
     justify-content: space-around;
     background-color: rgb(255, 255, 255,0.8);
-    border: 2px solid black; 
-    margin-top: 3vh;
+    /* border: 2px solid black;  */
+    margin-top: 5vh;
     padding-top: 7vh;
     padding-bottom: 3vh;
     padding-right: 2vh;
     padding-left: 2vh;  
     margin-bottom: 20px; /* Add margin-bottom to create spacing */
-
+    width:96%;
   }
   .estimate-row {
     display: flex;
@@ -108,7 +110,7 @@
     display: inline;
   }
   .income-div{
-    font-weight: bold;
+    /* font-weight: bold; */
     /* padding-right: -5vh; */
     display: flex;
     flex-wrap: wrap;
@@ -121,7 +123,7 @@
     font-size: medium;
   }
   .estimate-div span {
-    font-weight: bold;
+    /* font-weight: bold; */
     padding-right: 4.1vh;
   }
   /* .savings {
@@ -148,7 +150,7 @@
     text-align: center;
   }
   .status-button {
-    font-size: 80%;
+    font-size: small;
     font-family: 'Lucida Sans';
     /* padding: 10px 20px; */
     border-radius: 8px;
@@ -185,7 +187,7 @@
     padding: 1vh 3vh; /* Adjust padding values to make the button larger or smaller */
     border-radius: 0.4rem; /* Adjust border-radius to control the roundness of the border */
     color: white; /* Adjust the text color as needed */
-    font-size: 1em; /* Adjust font size to make the text larger or smaller */
+    font-size: medium; /* Adjust font size to make the text larger or smaller */
     font-family: 'Lucida Sans';
     text-decoration: none;
   }
@@ -197,12 +199,13 @@
     flex-wrap: wrap; /* Wrap the content if it exceeds the width */
   }
   .show-report-button {
-    background-color:rgb(5, 148, 173);
+    background-color:rgb(4, 121, 142);
       color: rgb(255, 255, 255);
       font-family: sans-serif;
       font-weight: bold;
       border-radius: 5px;
       border: none;
+      font-size:small;
   }
   .show-report-button:hover{
     color: rgb(255, 255, 255);
@@ -213,7 +216,7 @@
   .update-budget-button {
     background-color: rgb(39, 93, 240);
     color: white;
-    font-size: 80%;
+    font-size: small;
     font-family: 'Lucida Sans';
     border-radius: 8px;
     width: 10vh;
@@ -230,7 +233,7 @@
   .delete-budget-button {
     background-color: rgb(216, 15, 8);
     color: white;
-    font-size: 80%;
+    font-size: small;
     font-family: 'Lucida Sans';
     border-radius: 8px;
     width: 10vh;
@@ -244,7 +247,6 @@
     cursor: pointer;
   }
   .budget_pop{
-  
     align-items: center;
   }
   .budget_popcontent{
@@ -253,8 +255,8 @@
   }
   #budget_popclose{
     margin-left: 94%;
-    margin-top: -38vh;
-    height: 37vh;
+    margin-top: -95%;
+    /* height: 37vh; */
     /* width: 100px; */
   }
   #budget_popbutton{
@@ -287,7 +289,7 @@
     transition: 0.4s;
   }
   .budget_dropdown{
-    width: 30.5vh;
+    width: 94%;
     height: 5vh;
     margin-bottom: 1vh;
     margin-left: -5vh;
@@ -297,10 +299,11 @@
     font-size: 100%;
   }
   #popup_text{
-    width: 30vh;
-    height: 4vh;
+    width: 89%;
+    height: 3vh;
     margin-bottom: 1vh;
     margin-left: -5vh;
+    border: 1px solid black;
     /* align-content: center; */
   }
   table, th, td {
@@ -322,6 +325,7 @@
     height: flex;
     padding: 1%;
     background-color: WHITE;
+    font-size: medium;
   }
   
   /* .output{

@@ -213,7 +213,7 @@ const Transaction = () => {
       <SideBar>
         <div>
           <select id="dropdown-account" value={getaccountId} onChange={handleAccountChange}>
-            <option value="">-- All Transactions --</option>
+            <option value="">-- Select an account --</option>
             {accounts.map((account) => (
               <option key={account.id} value={account.id}>
                 {account.id}
@@ -227,15 +227,15 @@ const Transaction = () => {
               {accountList.map((account) => (
                 <tbody>
                   <tr key={account.id}>
-                    <td>Account ID</td>
+                    <th>Account ID</th>
                     <td>{account.id}</td>
                   </tr>
                   <tr key={account.accountName}>
-                    <td>Account Name</td>
+                    <th>Account Name</th>
                     <td>{account.accountName}</td>
                   </tr>
                   <tr key={account.accountType}>
-                    <td>Account Type</td>
+                    <th>Account Type</th>
                     <td>{account.accountType}</td>
                   </tr>
                   {/* <tr key={userData}>
@@ -243,7 +243,7 @@ const Transaction = () => {
                     <td>{userData}</td>
                   </tr> */}
                   <tr key={account.balance}>
-                    <td>Balance</td>
+                    <th>Balance</th>
                     <td>{account.balance}</td>
                   </tr>
                 </tbody>

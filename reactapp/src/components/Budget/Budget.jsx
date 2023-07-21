@@ -77,11 +77,6 @@ const Budget = () => {
       alert("Please fill in all the input fields");
     }
   };
-  
-  
-  
-  
-  
 
   const handleUpdate = (index) => {
     setEditIndex(index);
@@ -212,15 +207,6 @@ const Budget = () => {
       // Handle the error appropriately, e.g., show an error message to the user
     }
   };
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
   const [totalAmount, setTotalAmount] = useState(0);
   useEffect(() => {
@@ -285,7 +271,7 @@ const Budget = () => {
     <div className="budget-page-container">
       <div className="budget-details-con">
         <div className="budget-details">
-          <div className="drop-down" style={{ color: "WHITE" }}>
+          {/* <div className="drop-down" style={{ color: "WHITE" }}>
             <b>Month:</b>&nbsp;&nbsp;
             <select
               id="select1"
@@ -302,13 +288,13 @@ const Budget = () => {
             >
               {years}
             </select>
-          </div>
+          </div> */}
           <div className="button">
             <button
               onClick={() => setModalIsOpen(true)}
               className="create-budget-button"
             >
-              <b>Create Budget</b>
+              <b>CREATE BUDGET</b>
             </button>
           </div>
           <div className="estimate-income-container">
