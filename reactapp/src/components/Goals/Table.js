@@ -52,7 +52,7 @@ function Table() {
                             <td>{goal.description}</td>
                             <td>{goal.targetamount}</td>
                             <td>{goal.currentamount}</td>
-                            <td>{goal.targetamount<=goal.currentamount?<div style={{fontSize:'2vh',color:'green',fontWeight:'bold'}}>Reached</div>:<div style={{fontSize:'2vh',color:'red',fontWeight:'bold'}}>Not Reached</div>}</td>
+                            <td>{parseInt(goal.targetamount)<=parseInt(goal.currentamount)?<div style={{fontSize:'2vh',color:'green',fontWeight:'bold'}}>Reached</div>:<div style={{fontSize:'2vh',color:'red',fontWeight:'bold'}}>Not Reached</div>}</td>
                             <td><button  onClick={() => deleteGoal(goal.id)} className='delete' type='button' >DELETE</button></td>
                             <td><Link className='edit' to={`/editgoal/${goal.id}`} >EDIT</Link> </td>                          
                    

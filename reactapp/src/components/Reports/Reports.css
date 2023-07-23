@@ -1,0 +1,11 @@
+.report-button-debt {
+    background-color: rgb(4, 121, 142);
+  color: white;
+  padding: 10px;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  
+  }

@@ -17,7 +17,7 @@ const Budget = () => {
     category: "",
     purpose: "",
     date: "",
-    amount: 0,
+    amount: '',
     status: "NOT PAID",
   });
   const { category, purpose, date, amount, status } = newusers;
@@ -67,7 +67,7 @@ const Budget = () => {
           category: "",
           purpose: "",
           date: "",
-          amount: 0,
+          amount: '',
           status: "NOT PAID",
         });
       } catch (error) {
@@ -127,42 +127,42 @@ const Budget = () => {
   };
   
 
-  const [months, setMonths] = useState([]);
-  const [years, setYears] = useState([]);
-  const [selectedMonth, setSelectedMonth] = useState("");
-  const [selectedYear, setSelectedYear] = useState("");
+  // const [months, setMonths] = useState([]);
+  // const [years, setYears] = useState([]);
+  // const [selectedMonth, setSelectedMonth] = useState("");
+  // const [selectedYear, setSelectedYear] = useState("");
 
-  useEffect(() => {
-    // Populate the month select with options
-    const monthOptions = [];
-    for (let i = 1; i <= 12; i++) {
-      monthOptions.push(
-        <option key={i} value={i}>
-          {i}
-        </option>
-      );
-    }
-    setMonths(monthOptions);
-    const currentYear = new Date().getFullYear();
-    const yearOptions = [];
-    for (let i = currentYear - 5; i <= currentYear + 5; i++) {
-      yearOptions.push(
-        <option key={i} value={i}>
-          {i}
-        </option>
-      );
-    }
-    setYears(yearOptions);
-    setSelectedMonth(new Date().getMonth() + 1);
-    setSelectedYear(currentYear);
-  }, []);
+  // useEffect(() => {
+  //   // Populate the month select with options
+  //   const monthOptions = [];
+  //   for (let i = 1; i <= 12; i++) {
+  //     monthOptions.push(
+  //       <option key={i} value={i}>
+  //         {i}
+  //       </option>
+  //     );
+  //   }
+  //   setMonths(monthOptions);
+  //   const currentYear = new Date().getFullYear();
+  //   const yearOptions = [];
+  //   for (let i = currentYear - 5; i <= currentYear + 5; i++) {
+  //     yearOptions.push(
+  //       <option key={i} value={i}>
+  //         {i}
+  //       </option>
+  //     );
+  //   }
+  //   setYears(yearOptions);
+  //   setSelectedMonth(new Date().getMonth() + 1);
+  //   setSelectedYear(currentYear);
+  // }, []);
 
-  const handleMonthChange = (event) => {
-    setSelectedMonth(parseInt(event.target.value));
-  };
-  const handleYearChange = (event) => {
-    setSelectedYear(parseInt(event.target.value));
-  };
+  // const handleMonthChange = (event) => {
+  //   setSelectedMonth(parseInt(event.target.value));
+  // };
+  // const handleYearChange = (event) => {
+  //   setSelectedYear(parseInt(event.target.value));
+  // };
 
   const [estimateValue, setEstimateValue] = useState("");
 
@@ -175,7 +175,7 @@ const Budget = () => {
     setIncomeValue(event.target.value);
   };
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
   const handleClick = async (index) => {
     if (isNaN(parseInt(estimateValue))) {

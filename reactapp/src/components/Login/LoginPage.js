@@ -48,7 +48,7 @@ const LoginPage = () => {
                 <div className="section2">
                     <div className='header'>Personal Finance Manager</div>
                     <form className="login" onSubmit={submit}>
-                        <p className="Letsgearup">&nbsp;&nbsp;User Login</p>
+                        <p className="Letsgearup">&nbsp;&nbsp;User login</p>
                         <input id="Username" type="email" value={Username} placeholder="Usermail" name="Username" onChange={onchange} /><br /><br />
                         <input id="Password" type="password" value={Password} placeholder="Password" name="Password" onChange={onchange} /><br /><br />
                         <button id="LoginButton" type="submit" value="submit">Login</button><br /><br />

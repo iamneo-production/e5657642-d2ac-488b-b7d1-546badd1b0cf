@@ -71,7 +71,7 @@ const RegisterPage = () => {
                 <div className="container2">
                     <section className="box2">
                         <form onSubmit={handleSubmit}>
-                            <b>Register User</b>
+                            <b style={{fontFamily:'Lucida Sans'}}>User registeration</b>
 
 
 
