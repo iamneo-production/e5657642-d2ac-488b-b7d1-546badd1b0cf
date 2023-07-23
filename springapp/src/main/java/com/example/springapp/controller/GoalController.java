@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@CrossOrigin("https://8081-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io")
+@CrossOrigin("https://8081-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/")
 public class GoalController {
 
     @Autowired

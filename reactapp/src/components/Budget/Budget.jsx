@@ -8,7 +8,7 @@ import SideBar from '../NavBar/SideBar';
 import axios from "axios";
 
 const Budget = () => {
-  const API_URL = "https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/"; // Update the port if necessary
+  const API_URL = "https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/"; // Update the port if necessary
 
   const [users, setUsers] = useState([]);
 
@@ -244,9 +244,6 @@ const Budget = () => {
   const validateForm = () => {
     const errors = {};
 
-    // if (id === "") {
-    //   errors.id = "Please enter an ID";
-    // }
     if (category === "") {
       errors.category = "Please select a category";
     }
