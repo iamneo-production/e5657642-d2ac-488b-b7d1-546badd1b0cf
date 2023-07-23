@@ -22,7 +22,7 @@
   }
   .create-budget-button {
     position: fixed;
-    top: 13%;
+    top: 12.5%;
     right: 5%; /* Adjust the right value to position the button as desired */
     transform: translateY(-50%);
     /* display: inline-block; */
@@ -133,8 +133,7 @@
     margin-top: 4%;
     flex-wrap: wrap;
     overflow: auto;
-    height: 45vh;
-    
+    height: fit-content;
   }
  
   
