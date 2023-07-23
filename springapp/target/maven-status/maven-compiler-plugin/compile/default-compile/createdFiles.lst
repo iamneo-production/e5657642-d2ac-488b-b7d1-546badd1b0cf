@@ -7,8 +7,8 @@ com/example/springapp/model/LoginRegisterModel.class
 com/example/springapp/repository/GoalRepository.class
 com/example/springapp/controller/AccountController.class
 com/example/springapp/controller/DebtsController.class
-com/example/springapp/services/AccountServices.class
 com/example/springapp/repository/LoginRegisterRepository.class
+com/example/springapp/services/AccountServices.class
 com/example/springapp/model/Budget.class
 com/example/springapp/controller/BudgetController.class
 com/example/springapp/services/DebtsServices.class
@@ -18,5 +18,5 @@ com/example/springapp/controller/GoalController.class
 com/example/springapp/controller/LoginRegisterController.class
 com/example/springapp/model/DebtsModel.class
 com/example/springapp/services/BudgetService.class
-com/example/springapp/services/BudgetServiceImpl.class
 com/example/springapp/repository/AccountRepository.class
+com/example/springapp/services/BudgetServiceImpl.class
