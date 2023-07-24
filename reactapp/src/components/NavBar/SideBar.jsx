@@ -12,13 +12,16 @@ import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const SideBar = ({ children }) => {
-  
+
     const navigate = useNavigate();
 
     const handleLogout = async () => {
         try {
             await axios.post('https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/logout');
             navigate('/');
+            localStorage.removeItem('id');
+            localStorage.removeItem('lastViewedAccountData');
+            localStorage.removeItem('lastViewedAccountTransactions');
             window.history.pushState(null, document.title, window.location.href);
             window.addEventListener('popstate', function (event) {
                 window.history.pushState(null, document.title, window.location.href);
