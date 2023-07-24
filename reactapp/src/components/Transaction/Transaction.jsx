@@ -4,12 +4,12 @@ import '../NavBar/NavBar.css';
 import SideBar from '../NavBar/SideBar';
 import './Transaction.css';
 import axios from 'axios';
+import base_url from '../API/api';
 
 const Transaction = () => {
   const [getaccountId, setAccountId] = useState();
   const [accounts, setAccounts] = useState([]);
   const [accountList, setAccountList] = useState([]);
-  const [userData, setUserData] = useState();
   const [transactions, setTransactions] = useState([]);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [lastViewedAccountId, setLastViewedAccountId] = useState(null);
@@ -17,7 +17,6 @@ const Transaction = () => {
   useEffect(() => {
     const storedid = localStorage.getItem('id');
     if (storedid) {
-      setUserData(storedid);
       fetchAccounts();
       loadLastViewedAccountData();
     } else {
@@ -59,7 +58,7 @@ const Transaction = () => {
   };
   const fetchAccounts = async () => {
     try {
-      const response = await axios.get('https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/accounts');
+      const response = await axios.get(`${base_url}/accounts`);
       setAccounts(response.data);
     } catch (error) {
       console.log('Error:', error);
@@ -77,7 +76,7 @@ const Transaction = () => {
       return;
     }
     try {
-      const response = await axios.get(`https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/accounts/id?id=${getaccountId}`);
+      const response = await axios.get(`${base_url}/accounts/id?id=${getaccountId}`);
       setAccountList(response.data);
       // Check if transactions exist for the selected account ID
       const storedTransactions = JSON.parse(localStorage.getItem('lastViewedAccountTransactions'));
@@ -164,9 +163,9 @@ const Transaction = () => {
   };
 
   const generateTransactionId = () => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const characters = '0123456789';
     let transactionId = '';
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 10; i++) {
       transactionId += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     return transactionId;
@@ -238,10 +237,10 @@ const Transaction = () => {
                     <td>Account Type</td>
                     <td>{account.accountType}</td>
                   </tr>
-                  <tr key={userData}>
+                  {/* <tr key={userData}>
                     <td>User ID</td>
                     <td>{userData}</td>
-                  </tr>
+                  </tr> */}
                   <tr key={account.balance}>
                     <td>Balance</td>
                     <td>{account.balance}</td>

@@ -9,6 +9,7 @@ import {
     FaFileAlt
 } from "react-icons/fa";
 import axios from 'axios';
+import base_url from '../API/api';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const SideBar = ({ children }) => {
@@ -17,7 +18,7 @@ const SideBar = ({ children }) => {
 
     const handleLogout = async () => {
         try {
-            await axios.post('https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io/logout');
+            await axios.post(`${base_url}/logout`);
             navigate('/');
             localStorage.removeItem('id');
             localStorage.removeItem('lastViewedAccountData');
@@ -26,6 +27,7 @@ const SideBar = ({ children }) => {
             window.addEventListener('popstate', function (event) {
                 window.history.pushState(null, document.title, window.location.href);
             });
+            console.log('LoggedOut successfully');
         } catch (error) {
             console.log('Logout failed:', error);
         }

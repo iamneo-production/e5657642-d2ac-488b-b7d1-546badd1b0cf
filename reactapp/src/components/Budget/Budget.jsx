@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "../Budget/Budget.css";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
-import {useEffect} from "react";
+import base_url from '../API/api';
 import Header from '../NavBar/Header';
 import SideBar from '../NavBar/SideBar';
 import axios from "axios";
 
 const Budget = () => {
-  const API_URL = "https://8080-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io"; // Update the port if necessary
 
   const [users, setUsers] = useState([]);
 
@@ -49,14 +48,14 @@ const Budget = () => {
           };
           console.log(newusers.id);
           console.log(updatedBudget);
-          await axios.put(`${API_URL}/budget/${newusers.id}`, updatedBudget);
+          await axios.put(`${base_url}/budget/${newusers.id}`, updatedBudget);
           
           updatedUsers[editIndex] = updatedBudget;
           setUsers(updatedUsers);
           loadUsers();
         } else {
           const newBudget = { ...newusers};
-          await axios.post(`${API_URL}/budget`, newBudget);
+          await axios.post(`${base_url}/budget`, newBudget);
           loadUsers();
         }
         setFormErrors({});
@@ -97,7 +96,7 @@ const Budget = () => {
     console.log("UserId:", userId);
   
     try {
-      await axios.delete(`${API_URL}/budget/${userId}`);
+      await axios.delete(`${base_url}/budget/${userId}`);
       const updatedUsers = [...users];
       updatedUsers.splice(index, 1);
       setUsers(updatedUsers);
@@ -116,7 +115,7 @@ const Budget = () => {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get(`${API_URL}/budget`);
+    const result = await axios.get(`${base_url}/budget`);
     const fetchedUsers = result.data;
   
     // Check if fetchedUsers array has data
@@ -203,7 +202,7 @@ const Budget = () => {
     try {
       console.log(user.id);
       console.log(updatedUser);
-      await axios.put(`${API_URL}/budget/${user.id}`, updatedUser);
+      await axios.put(`${base_url}/budget/${user.id}`, updatedUser);
       const updatedUsers = [...users];
       updatedUsers[index] = updatedUser;
       setUsers(updatedUsers);
@@ -244,9 +243,6 @@ const Budget = () => {
   const validateForm = () => {
     const errors = {};
 
-    // if (id === "") {
-    //   errors.id = "Please enter an ID";
-    // }
     if (category === "") {
       errors.category = "Please select a category";
     }

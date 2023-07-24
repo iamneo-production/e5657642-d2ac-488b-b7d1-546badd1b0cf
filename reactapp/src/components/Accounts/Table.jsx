@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Account.css';
 import axios from 'axios';
-import base_url from './AccountsApi';
+import base_url from '../API/api';
 
 const Table = () => {
   const [accountList, setAccountList] = useState([]);
