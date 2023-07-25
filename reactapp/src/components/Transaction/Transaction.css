@@ -27,3 +27,10 @@
 .account_detail td{
   padding: 0%;
 }
+
+@media screen and (max-height: 768px) {
+  .showtrans{
+    margin-left: 22%;
+    margin-top: 0.5%;
+  }
+}

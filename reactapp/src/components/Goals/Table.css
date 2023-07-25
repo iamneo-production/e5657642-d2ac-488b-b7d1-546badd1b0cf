@@ -166,6 +166,26 @@
   font-weight: 100;
  }
 
+ @media screen and (max-height: 768px) {
+  .report{
+    width: 20vh;
+    height: 5vh;
+  }
+
+  .delete{
+    width: 12vh;
+    height: 4.5vh;
+    padding: 1%;
+    margin-top: 2.5vh;
+    font-size: 0.8rem;
+  }
+
+  .edit{
+    height: 4.5vh;
+  }
+  
+ }
+
  
  
  

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.*;
 
 @RestController
-@CrossOrigin("https://8081-dabaceabfbbcfbfbdcabeaeaadbdbabf.project.examly.io")
+@CrossOrigin("https://8081-dabaceabfbbcfbfbdcabfdecaedefadebea.project.examly.io")
 public class LoginRegisterController {
 
     @Autowired

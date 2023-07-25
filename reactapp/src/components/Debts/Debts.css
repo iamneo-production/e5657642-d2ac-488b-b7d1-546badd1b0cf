@@ -253,6 +253,14 @@
             padding-left: 3%;
 
         }
+
+        #button1{
+            width: 15.5vh;
+        }
+
+        #report_button{
+            width: 20vh;
+        }
         .output{
             margin-left: 75vh;
             margin-top: -26vh;
