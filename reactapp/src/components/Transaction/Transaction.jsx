@@ -59,7 +59,7 @@ const Transaction = () => {
   };
   const fetchAccounts = async () => {
     try {
-      const response = await axios.get('https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/accounts');
+      const response = await axios.get('https://8080-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io/accounts');
       setAccounts(response.data);
     } catch (error) {
       console.log('Error:', error);
@@ -77,7 +77,7 @@ const Transaction = () => {
       return;
     }
     try {
-      const response = await axios.get(`https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/accounts/id?id=${getaccountId}`);
+      const response = await axios.get(`https://8080-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io/accounts/id?id=${getaccountId}`);
       setAccountList(response.data);
       // Check if transactions exist for the selected account ID
       const storedTransactions = JSON.parse(localStorage.getItem('lastViewedAccountTransactions'));
