@@ -16,7 +16,7 @@ const Budget = () => {
     category: "",
     purpose: "",
     date: "",
-    amount: 0,
+    amount: '',
     status: "NOT PAID",
   });
   const { category, purpose, date, amount, status } = newusers;
