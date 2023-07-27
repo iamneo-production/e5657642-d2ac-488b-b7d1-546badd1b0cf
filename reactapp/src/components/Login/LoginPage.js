@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import base_url from '../API/api';
 
 const LoginPage = () => {
     let n = useNavigate()
@@ -18,7 +19,7 @@ const LoginPage = () => {
     }
 
     useEffect(() => {
-        axios.get("https://8080-efddfbedcacbcfbfbdcabfdecaedefadebea.project.examly.io/user").then((resp) => userdata(resp.data))
+        axios.get(`${base_url}/user`).then((resp) => userdata(resp.data))
             .catch((error) => console.log(error))
     }, [])
 
@@ -28,14 +29,17 @@ const LoginPage = () => {
         const verify = data.find(i =>
             (loginData.Username === i.email && loginData.Password === i.password))
         if (verify) {
-            localStorage.setItem('firstname', verify.firstname);
+            localStorage.setItem('id', verify.id);
+            localStorage.setItem('firstname',verify.firstname);
+            localStorage.setItem('lastname',verify.lastname);
+            localStorage.setItem('email',verify.email);
+            localStorage.setItem('role',verify.role);
             n('/dashboard')
         }
         else {
             window.alert("details not matched")
         }
         setLoginData({ Username: "", Password: "" })
-
     }
 
     return (
@@ -57,5 +61,4 @@ const LoginPage = () => {
         </div>
     )
 }
-
-export default LoginPage
+export default LoginPage;

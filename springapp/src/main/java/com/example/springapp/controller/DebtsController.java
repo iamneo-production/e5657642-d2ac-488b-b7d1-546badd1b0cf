@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("https://8081-efddfbedcacbcfbfbdcabfdecaedefadebea.project.examly.io")
+@CrossOrigin("https://8081-efddfbedcacbcfbfbdcabfdecaedefadebea.project.examly.io/")
 public class DebtsController {
 
     @Autowired
