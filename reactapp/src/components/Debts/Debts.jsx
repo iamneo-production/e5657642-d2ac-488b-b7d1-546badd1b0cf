@@ -37,16 +37,31 @@ const Debts = () => {
   };
 
   const handleAmountChange = (e) => {
-    setAmount(parseFloat(e.target.value));
-  };
+    const value1 = parseFloat(e.target.value);
+    if(!isNaN(value1)){
+    setAmount(value1);
+    }else{
+      setAmount('');
+    }
+};
 
-  const handleInterestChange = (e) => {
-    setInterest(parseFloat(e.target.value));
-  };
+const handleInterestChange = (e) => {
+  const value2 = parseFloat(e.target.value);
+  if(!isNaN(value2)){
+  setInterest(value2);
+  }else{
+    setInterest('');
+    }
+};
 
-  const handleMinChange = (e) => {
-    setMin(parseFloat(e.target.value));
-  };
+const handleMinChange = (e) => {
+  const value3 = parseFloat(e.target.value);
+  if(!isNaN(value3)){
+  setMin(value3);
+  }else{
+    setMin('');
+    }
+};
 
   const handlePrint = () => {
     if (String(debtname).trim() === ''||isNaN(parseFloat(amount))||isNaN(parseFloat(interest))||isNaN(parseFloat(min))) {

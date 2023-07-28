@@ -16,7 +16,7 @@ const Budget = () => {
     category: "",
     purpose: "",
     date: "",
-    amount: 0,
+    amount: '',
     status: "NOT PAID",
   });
   const { category, purpose, date, amount, status } = newusers;
@@ -76,11 +76,6 @@ const Budget = () => {
       alert("Please fill in all the input fields");
     }
   };
-  
-  
-  
-  
-  
 
   const handleUpdate = (index) => {
     setEditIndex(index);
@@ -104,11 +99,6 @@ const Budget = () => {
       console.error(error);
     }
   };
-  
-  
-
-
-
 
   useEffect(() => {
     loadUsers();
@@ -130,43 +120,6 @@ const Budget = () => {
     }
   };
   
-
-  const [months, setMonths] = useState([]);
-  const [years, setYears] = useState([]);
-  const [selectedMonth, setSelectedMonth] = useState("");
-  const [selectedYear, setSelectedYear] = useState("");
-
-  useEffect(() => {
-    // Populate the month select with options
-    const monthOptions = [];
-    for (let i = 1; i <= 12; i++) {
-      monthOptions.push(
-        <option key={i} value={i}>
-          {i}
-        </option>
-      );
-    }
-    setMonths(monthOptions);
-    const currentYear = new Date().getFullYear();
-    const yearOptions = [];
-    for (let i = currentYear - 5; i <= currentYear + 5; i++) {
-      yearOptions.push(
-        <option key={i} value={i}>
-          {i}
-        </option>
-      );
-    }
-    setYears(yearOptions);
-    setSelectedMonth(new Date().getMonth() + 1);
-    setSelectedYear(currentYear);
-  }, []);
-
-  const handleMonthChange = (event) => {
-    setSelectedMonth(parseInt(event.target.value));
-  };
-  const handleYearChange = (event) => {
-    setSelectedYear(parseInt(event.target.value));
-  };
 
   const [estimateValue, setEstimateValue] = useState("");
 
@@ -211,14 +164,6 @@ const Budget = () => {
       // Handle the error appropriately, e.g., show an error message to the user
     }
   };
-  
-  
-  
-  
-  
-  
-  
-  
   
 
   const [totalAmount, setTotalAmount] = useState(0);
@@ -284,24 +229,6 @@ const Budget = () => {
     <div className="budget-page-container">
       <div className="budget-details-con">
         <div className="budget-details">
-          <div className="drop-down" style={{ color: "WHITE" }}>
-            <b>Month:</b>&nbsp;&nbsp;
-            <select
-              id="select1"
-              value={selectedMonth}
-              onChange={handleMonthChange}
-            >
-              {months}
-            </select>
-            <b>Year:</b>&nbsp;&nbsp;
-            <select
-              id="select1"
-              value={selectedYear}
-              onChange={handleYearChange}
-            >
-              {years}
-            </select>
-          </div>
           <div className="button">
             <button
               onClick={() => setModalIsOpen(true)}
