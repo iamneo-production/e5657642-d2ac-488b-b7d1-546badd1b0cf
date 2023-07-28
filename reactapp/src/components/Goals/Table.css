@@ -1,0 +1,173 @@
+.table1 {
+    background-color: white;
+    border-color: rgb(12, 12, 12);
+    /* border: 0.1pc solid; */
+    border-collapse: collapse;
+    margin-top: 1.5vh; /* Converted to vh */
+    margin-left: 1.5vh; /* Converted to vh */
+    margin-right: 1.5vh; /* Converted to vh */
+    width: 97%;
+    margin-bottom: 1.5vh; /* Converted to vh */
+  }
+  
+ 
+  .table1 th {
+    background-color: black;
+    /* border-color: rgb(255, 255, 255); */
+    /* border: 0.1pc solid; */
+    border-collapse: collapse;
+    padding-top: 1vh; /* Converted to vh */
+    padding-bottom: 1vh; /* Converted to vh */
+    font-weight: bold;
+    font-size:medium;
+    background-color: rgb(16,94,133);
+    text-align: center;
+    font-family:'Lucida Sans';
+    color: white;
+  }
+  .table1 td{
+    background-color: white;
+    border-color: rgb(12, 12, 12);
+    border: 0.1pc solid;
+    border-collapse: collapse;
+    padding-top: 1vh; /* Converted to vh */
+    padding-bottom: 1vh; /* Converted to vh */
+    text-align: center;
+    border:1px solid black;
+  }
+  
+  .addForm input[type="text"] {
+    width: 33%;
+    padding: 0.5vh 0.5vh 0.5vh 0.5vh; /* Converted to vh */
+    margin-left: 10vh; /* Converted to vh */
+    margin-bottom: 0.5vh; /* Converted to vh */
+    margin-top: 0.5vh; /* Converted to vh */
+    box-sizing: border-box;
+    font-weight: bold;
+    color: black;
+    /* border-color: rgb(12, 12, 12); */
+    border: 0.1pc solid;
+    border-collapse: collapse;
+  }
+  
+  .addForm {
+    /* border: 2px solid black; */
+    background-color: rgb(255, 255, 255,0.7);
+    margin-left: 2vh; /* Converted to vh */
+    margin-right: 3vh; /* Converted to vh */
+    padding: 1.5%;
+  }
+  
+  .addForm h1 {
+    color: green;
+    font-weight: bold;
+    padding: 0.5vh 0.5vh 0.5vh 0.5vh; /* Converted to vh */
+    font-size: 1rem;
+  }
+  
+  .addForm button {
+    color: aliceblue;
+    font-weight: bold;
+    background-color: rgb(94, 178, 58);
+    border-radius: 5px; /* Converted to vh */
+    padding: 0.1vh 0.1vh 0.1vh 0.1vh; /* Converted to vh */
+    width: 10%;
+    margin-left: 10vh; /* Converted to vh */
+    margin-bottom: 1vh; /* Converted to vh */
+    margin-top: 1vh; /* Converted to vh */
+    height: 5vh;
+    border: none;
+  }
+  .addForm button:hover{
+    transition: 0.4s;
+    background-color: rgb(112, 208, 71);
+    cursor: pointer;
+  }
+  
+  
+  .edit {
+    margin-top: 1vh; 
+    margin-left: 3vh; 
+    margin-bottom: 2vh; 
+    width: 10vh; 
+    height: 2vh;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 0.7em;
+  } 
+  
+  .report{
+    width: 17vh;
+    height: 4.8vh;
+    background-color:rgb(4, 121, 142);
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    margin-left: 40%;
+    
+  }
+  .report:hover{
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(38, 188, 215);
+  }
+  .edit{
+    width: 15vh;
+    height: 2vh;
+    background-color: rgb(39, 93, 240);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    margin-left: 1%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    font-family: 'Lucida Sans';
+  }
+  .edit:hover{
+    cursor: pointer;
+    background-color: rgb(92, 135, 253);
+    transition: 0.4s;
+  }
+  
+ .delete{
+  background-color: rgb(216, 15, 8);
+  color: white;
+  font-size: 0.7em;
+  border-radius: 8px;
+  width: 12vh;
+  height: 5vh;
+  border: none;
+  font-weight: bold;
+  margin-left: 1vh;
+  margin-top: 3vh;
+    
+ }
+ .delete:hover{
+    transition: 0.4s;
+    background-color: rgb(251, 147, 144);
+    cursor: pointer;
+ }
+ 
+ .cancel:hover{
+    transition: 0.4s;
+    background-color: rgb(251, 147, 144);
+    cursor: pointer;
+ }
+
+ #formtext{
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-family: 'Lucida Sans';
+  font-size: 1rem;
+  font-weight: 100;
+ }
+
+ 
+ 
+ 
+ 
