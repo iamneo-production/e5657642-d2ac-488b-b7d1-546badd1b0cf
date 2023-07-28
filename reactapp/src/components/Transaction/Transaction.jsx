@@ -10,6 +10,7 @@ const Transaction = () => {
   const [getaccountId, setAccountId] = useState();
   const [accounts, setAccounts] = useState([]);
   const [accountList, setAccountList] = useState([]);
+  const [userData, setUserData] = useState();
   const [transactions, setTransactions] = useState([]);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [lastViewedAccountId, setLastViewedAccountId] = useState(null);
@@ -17,6 +18,7 @@ const Transaction = () => {
   useEffect(() => {
     const storedid = localStorage.getItem('id');
     if (storedid) {
+      setUserData(storedid);
       fetchAccounts();
       loadLastViewedAccountData();
     } else {
@@ -212,10 +214,10 @@ const Transaction = () => {
       <SideBar>
         <div>
           <select id="dropdown-account" value={getaccountId} onChange={handleAccountChange}>
-            <option value="">-- All Transactions --</option>
+            <option value="">-- Select an account --</option>
             {accounts.map((account) => (
               <option key={account.id} value={account.id}>
-                {account.id}
+                {account.id}-{account.accountName}
               </option>
             ))}
           </select>
@@ -226,15 +228,15 @@ const Transaction = () => {
               {accountList.map((account) => (
                 <tbody>
                   <tr key={account.id}>
-                    <td>Account ID</td>
+                    <th>Account ID</th>
                     <td>{account.id}</td>
                   </tr>
                   <tr key={account.accountName}>
-                    <td>Account Name</td>
+                    <th>Account Name</th>
                     <td>{account.accountName}</td>
                   </tr>
                   <tr key={account.accountType}>
-                    <td>Account Type</td>
+                    <th>Account Type</th>
                     <td>{account.accountType}</td>
                   </tr>
                   {/* <tr key={userData}>
@@ -242,7 +244,7 @@ const Transaction = () => {
                     <td>{userData}</td>
                   </tr> */}
                   <tr key={account.balance}>
-                    <td>Balance</td>
+                    <th>Balance</th>
                     <td>{account.balance}</td>
                   </tr>
                 </tbody>
