@@ -1,332 +1,332 @@
 
-  .budget-details-container{
-    overflow: hidden;
-  }
-  .budget-details-con {
-    display: flex;
-    flex-wrap: nowrap;
-    position: relative;
-    flex-direction: column;
-    height: 22vh;
-  }
-  
-  .budget-details {
-    /* background-color: yellow; */
-    margin-top: 2%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-  }
-  .create-budget-button {
-    position: fixed;
-    top: 12.5%;
-    right: 5%; /* Adjust the right value to position the button as desired */
-    transform: translateY(-50%);
-    /* display: inline-block; */
-    padding: 8px 16px; /* Adjust padding values to make the button larger or smaller */
-    border-radius: 10px; /* Adjust border-radius to control the roundness of the border */
-    background-color: rgb(39, 93, 240);
-    color: #ffffff; /* Adjust the text color as needed */
-    font-size: 50%; /* Adjust font size to make the text larger or smaller */
-    font-family: 'Lucida Sans';
-    text-decoration: none;
-    border:none;
-    height: 5%;
-  }
-  .create-budget-button:hover{
-    cursor: pointer;
-    transition: 0.4s;
-    background-color: rgb(92, 135, 253);
-  }
-  /* .estimate-row{
-      
-  } */
-  .select-month {
-    font-family: 'Lucida Sans';
-    font-size: 2vh;
-    font-weight: bolder;
-    color: rgb(37, 37, 156);
-  }
-  #select1 {
-    width: 20vh;
-    height: 5vh;
-    font-size: 1em;
-    font-family: 'Lucida Sans';
-    color: rgb(37, 37, 156); /* Set the text color of the dropdown options */
-    background-color: #ffffff;
-    margin-right: 2vh;
-  }
-  
-  #option1 {
-    color: rgb(37, 37, 156); /* Set the text color of individual options */
-    background-color: #d9e2f3; /* Set the background color of individual options */
-  }
-  .estimate-row input[type="text"],
-  .income-row input[type="text"] {
-    width: 40%; /* Adjust the width using vh */
-    height: 50%;
-    border-bottom: 1px solid black;
-    /* border: 1px solid #000;  */
-    border-radius: 2%;
-    text-align: center;
-    /* font-weight: bold; Set the font weight to bold */
-    /* padding-right: -10%; */
-  }
-  span{
-      font-weight: bold;
-      padding-right: 0%;
-  }
-  .estimate-income-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: rgb(255, 255, 255,0.8);
-    /* border: 2px solid black;  */
-    margin-top: 5vh;
-    padding-top: 7vh;
-    padding-bottom: 3vh;
-    padding-right: 2vh;
-    padding-left: 2vh;  
-    margin-bottom: 20px; /* Add margin-bottom to create spacing */
-    width:96%;
-  }
-  .estimate-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -3%;
-    margin-bottom: 3vh;
-  }
-  .est-item{
-    flex-grow: 1; /* Allow the child elements to grow */
-    font-size: medium;
-    flex-basis: 25%; /* Set the initial width of each child element */
-    /* Add any additional styles for the child elements */
-    margin-left: -1px;
-  }
-  .income-div {
-    display: inline;
-  }
-  .income-div{
-    /* font-weight: bold; */
-    /* padding-right: -5vh; */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .inc-item{
-    flex-grow: 1; /* Allow the child elements to grow */
-    flex-basis: 25%; /* Set the initial width of each child element */
-    /* Add any additional styles for the child elements */
-    font-size: medium;
-  }
-  .estimate-div span {
-    /* font-weight: bold; */
-    padding-right: 4.1vh;
-  }
-  /* .savings {
-  } */
-  .budget-table {
-    display: flex;
-    margin-top: 4%;
-    flex-wrap: wrap;
-    overflow: auto;
-    height: fit-content;
-  }
- 
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th,
-  td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: center;
-  }
-  .status-button {
-    font-size: small;
-    font-family: 'Lucida Sans';
-    /* padding: 10px 20px; */
-    border-radius: 8px;
-    width: 10vh;
-    height: 5vh;
-    border: none;
+.budget-details-container{
+  overflow: hidden;
+}
+.budget-details-con {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  flex-direction: column;
+  height: 22vh;
+}
+
+.budget-details {
+  /* background-color: yellow; */
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.create-budget-button {
+  position: fixed;
+  top: 12.5%;
+  right: 5%; /* Adjust the right value to position the button as desired */
+  transform: translateY(-50%);
+  /* display: inline-block; */
+  padding: 8px 16px; /* Adjust padding values to make the button larger or smaller */
+  border-radius: 10px; /* Adjust border-radius to control the roundness of the border */
+  background-color: rgb(39, 93, 240);
+  color: #ffffff; /* Adjust the text color as needed */
+  font-size: 50%; /* Adjust font size to make the text larger or smaller */
+  font-family: 'Lucida Sans';
+  text-decoration: none;
+  border:none;
+  height: 5%;
+}
+.create-budget-button:hover{
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: rgb(92, 135, 253);
+}
+/* .estimate-row{
+    
+} */
+.select-month {
+  font-family: 'Lucida Sans';
+  font-size: 2vh;
+  font-weight: bolder;
+  color: rgb(37, 37, 156);
+}
+#select1 {
+  width: 20vh;
+  height: 5vh;
+  font-size: 1em;
+  font-family: 'Lucida Sans';
+  color: rgb(37, 37, 156); /* Set the text color of the dropdown options */
+  background-color: #ffffff;
+  margin-right: 2vh;
+}
+
+#option1 {
+  color: rgb(37, 37, 156); /* Set the text color of individual options */
+  background-color: #d9e2f3; /* Set the background color of individual options */
+}
+.estimate-row input[type="text"],
+.income-row input[type="text"] {
+  width: 40%; /* Adjust the width using vh */
+  height: 50%;
+  border-bottom: 1px solid black;
+  /* border: 1px solid #000;  */
+  border-radius: 2%;
+  text-align: center;
+  /* font-weight: bold; Set the font weight to bold */
+  /* padding-right: -10%; */
+}
+span{
     font-weight: bold;
-  }
-  .status-button:hover{
-    transition: 0.4s;
-    cursor:pointer;
-    background-color: rgb(249, 145, 131);
-  }
-  .paid {
-    background-color: green;
-    color: white;
-  }
-  .paid:hover{
-    background-color: rgb(163, 247, 163);
-  }
-  
-  .not-paid {
-    background-color: red;
-    color: white;
-  }
-  .budget-buttons {
-    display: flex;
-    margin: 7vh;
-    margin-left: -90vh;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .budget-buttons button {
-    padding: 1vh 3vh; /* Adjust padding values to make the button larger or smaller */
-    border-radius: 0.4rem; /* Adjust border-radius to control the roundness of the border */
-    color: white; /* Adjust the text color as needed */
-    font-size: medium; /* Adjust font size to make the text larger or smaller */
-    font-family: 'Lucida Sans';
-    text-decoration: none;
-  }
-  .budget-buttons {
-    display: flex;
-    margin: 7vh;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    flex-wrap: wrap; /* Wrap the content if it exceeds the width */
-  }
-  .show-report-button {
-    background-color:rgb(4, 121, 142);
-      color: rgb(255, 255, 255);
-      font-family: sans-serif;
-      font-weight: bold;
-      border-radius: 5px;
-      border: none;
-      font-size:small;
-  }
-  .show-report-button:hover{
-    color: rgb(255, 255, 255);
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: rgb(38, 188, 215);
-  }
-  .update-budget-button {
-    background-color: rgb(39, 93, 240);
-    color: white;
-    font-size: small;
-    font-family: 'Lucida Sans';
-    border-radius: 8px;
-    width: 10vh;
-    height: 5vh;
-    border: none;
-    font-weight: bold;
-  }
-  .update-budget-button:hover{
-    transition: 0.4s;
-    background-color: rgb(102, 183, 250);
-    cursor: pointer;
-    /* color: #000; */
-  }
-  .delete-budget-button {
-    background-color: rgb(216, 15, 8);
-    color: white;
-    font-size: small;
-    font-family: 'Lucida Sans';
-    border-radius: 8px;
-    width: 10vh;
-    height: 5vh;
-    border: none;
-    font-weight: bold;
-  }
-  .delete-budget-button:hover{
-    transition: 0.4s;
-    background-color: rgb(251, 147, 144);
-    cursor: pointer;
-  }
-  .budget_pop{
-    align-items: center;
-  }
-  .budget_popcontent{
-    padding-top: 2vh;
-    padding-left: 30%;
-  }
-  #budget_popclose{
-    margin-left: 94%;
-    margin-top: -95%;
-    /* height: 37vh; */
-    /* width: 100px; */
-  }
-  #budget_popbutton{
-  height: 4vh;
-  width: 4vh;
-  background-color:rgb(187, 10, 10);
-  color: rgb(255, 255, 255);
+    padding-right: 0%;
+}
+.estimate-income-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255,0.8);
+  /* border: 2px solid black;  */
+  margin-top: 5vh;
+  padding-top: 7vh;
+  padding-bottom: 3vh;
+  padding-right: 2vh;
+  padding-left: 2vh;  
+  margin-bottom: 20px; /* Add margin-bottom to create spacing */
+  width:96%;
+}
+.estimate-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -3%;
+  margin-bottom: 3vh;
+}
+.est-item{
+  flex-grow: 1; /* Allow the child elements to grow */
+  font-size: medium;
+  flex-basis: 25%; /* Set the initial width of each child element */
+  /* Add any additional styles for the child elements */
+  margin-left: -1px;
+}
+.income-div {
+  display: inline;
+}
+.income-div{
+  /* font-weight: bold; */
+  /* padding-right: -5vh; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.inc-item{
+  flex-grow: 1; /* Allow the child elements to grow */
+  flex-basis: 25%; /* Set the initial width of each child element */
+  /* Add any additional styles for the child elements */
+  font-size: medium;
+}
+.estimate-div span {
+  /* font-weight: bold; */
+  padding-right: 4.1vh;
+}
+/* .savings {
+} */
+.budget-table {
+  display: flex;
+  margin-top: 4%;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: fit-content;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+}
+.status-button {
+  font-size: small;
+  font-family: 'Lucida Sans';
+  /* padding: 10px 20px; */
+  border-radius: 8px;
+  width: 10vh;
+  height: 5vh;
   border: none;
-  }
-  #budget_popbutton:hover{
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: rgb(239, 66, 66);
-  }
-  .popup_submit{
-    margin-top: 5vh;
-  }
-  .submitbutton{
-    width: 15vh;
-    height: 5vh;
-    margin-left: 3vh;
-    background-color: rgb(39, 93, 240);
-    color: white;
-    border-radius: 8px;
+  font-weight: bold;
+}
+.status-button:hover{
+  transition: 0.4s;
+  cursor:pointer;
+  background-color: rgb(249, 145, 131);
+}
+.paid {
+  background-color: green;
+  color: white;
+}
+.paid:hover{
+  background-color: rgb(163, 247, 163);
+}
+
+.not-paid {
+  background-color: red;
+  color: white;
+}
+.budget-buttons {
+  display: flex;
+  margin: 7vh;
+  margin-left: -90vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.budget-buttons button {
+  padding: 1vh 3vh; /* Adjust padding values to make the button larger or smaller */
+  border-radius: 0.4rem; /* Adjust border-radius to control the roundness of the border */
+  color: white; /* Adjust the text color as needed */
+  font-size: medium; /* Adjust font size to make the text larger or smaller */
+  font-family: 'Lucida Sans';
+  text-decoration: none;
+}
+.budget-buttons {
+  display: flex;
+  margin: 7vh;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  flex-wrap: wrap; /* Wrap the content if it exceeds the width */
+}
+.show-report-button {
+  background-color:rgb(4, 121, 142);
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
     border: none;
-  }
-  .submitbutton:hover{
-    cursor: pointer;
-    background-color: rgb(92, 135, 253);
-    transition: 0.4s;
-  }
-  .budget_dropdown{
-    width: 94%;
-    height: 5vh;
-    margin-bottom: 1vh;
-    margin-left: -5vh;
-    font-size: medium;
-  }
-  .drop-down b{
-    font-size: 100%;
-  }
-  #popup_text{
-    width: 89%;
-    height: 3vh;
-    margin-bottom: 1vh;
-    margin-left: -5vh;
-    border: 1px solid black;
-    /* align-content: center; */
-  }
-  table, th, td {
-    margin-top: 4vh;
-    border:1px solid black;
-    border-collapse: collapse;
-    /* width: flex; */
-    height: 5vh;
-  }
-  th{
-    /* background-color: rgb(116, 167, 230); */
-    background-color:rgb(0, 0, 0);
-    font-size: large;
-    font-family: 'Lucida Sans';
-    color: white;
-    border:1px solid white;
-  }
-  td{
-    height: flex;
-    padding: 1%;
-    background-color: WHITE;
-    font-size: medium;
-  }
-  
-  /* .output{
-  padding-left: 1vh;
-  } */
+    font-size:small;
+}
+.show-report-button:hover{
+  color: rgb(255, 255, 255);
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(38, 188, 215);
+}
+.update-budget-button {
+  background-color: rgb(39, 93, 240);
+  color: white;
+  font-size: small;
+  font-family: 'Lucida Sans';
+  border-radius: 8px;
+  width: 10vh;
+  height: 5vh;
+  border: none;
+  font-weight: bold;
+}
+.update-budget-button:hover{
+  transition: 0.4s;
+  background-color: rgb(102, 183, 250);
+  cursor: pointer;
+  /* color: #000; */
+}
+.delete-budget-button {
+  background-color: rgb(216, 15, 8);
+  color: white;
+  font-size: small;
+  font-family: 'Lucida Sans';
+  border-radius: 8px;
+  width: 10vh;
+  height: 5vh;
+  border: none;
+  font-weight: bold;
+}
+.delete-budget-button:hover{
+  transition: 0.4s;
+  background-color: rgb(251, 147, 144);
+  cursor: pointer;
+}
+.budget_pop{
+  align-items: center;
+}
+.budget_popcontent{
+  padding-top: 2vh;
+  padding-left: 30%;
+}
+#budget_popclose{
+  margin-left: 94%;
+  margin-top: -95%;
+  /* height: 37vh; */
+  /* width: 100px; */
+}
+#budget_popbutton{
+height: 4vh;
+width: 4vh;
+background-color:rgb(187, 10, 10);
+color: rgb(255, 255, 255);
+border: none;
+}
+#budget_popbutton:hover{
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(239, 66, 66);
+}
+.popup_submit{
+  margin-top: 5vh;
+}
+.submitbutton{
+  width: 15vh;
+  height: 5vh;
+  margin-left: 3vh;
+  background-color: rgb(39, 93, 240);
+  color: white;
+  border-radius: 8px;
+  border: none;
+}
+.submitbutton:hover{
+  cursor: pointer;
+  background-color: rgb(92, 135, 253);
+  transition: 0.4s;
+}
+.budget_dropdown{
+  width: 94%;
+  height: 5vh;
+  margin-bottom: 1vh;
+  margin-left: -5vh;
+  font-size: medium;
+}
+.drop-down b{
+  font-size: 100%;
+}
+#popup_text{
+  width: 89%;
+  height: 3vh;
+  margin-bottom: 1vh;
+  margin-left: -5vh;
+  border: 1px solid black;
+  /* align-content: center; */
+}
+table, th, td {
+  margin-top: 4vh;
+  border:1px solid black;
+  border-collapse: collapse;
+  /* width: flex; */
+  height: 5vh;
+}
+th{
+  /* background-color: rgb(116, 167, 230); */
+  background-color:rgb(0, 0, 0);
+  font-size: large;
+  font-family: 'Lucida Sans';
+  color: white;
+  border:1px solid white;
+}
+td{
+  height: flex;
+  padding: 1%;
+  background-color: WHITE;
+  font-size: medium;
+}
+
+/* .output{
+padding-left: 1vh;
+} */

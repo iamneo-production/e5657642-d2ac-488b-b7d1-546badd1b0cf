@@ -10,6 +10,7 @@ const Transaction = () => {
   const [getaccountId, setAccountId] = useState();
   const [accounts, setAccounts] = useState([]);
   const [accountList, setAccountList] = useState([]);
+  const [userData, setUserData] = useState();
   const [transactions, setTransactions] = useState([]);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [lastViewedAccountId, setLastViewedAccountId] = useState(null);
@@ -17,6 +18,7 @@ const Transaction = () => {
   useEffect(() => {
     const storedid = localStorage.getItem('id');
     if (storedid) {
+      setUserData(storedid);
       fetchAccounts();
       loadLastViewedAccountData();
     } else {
