@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import * as EmailValidator from 'email-validator';
-import base_url from './HomeApi';
+import base_url from '../API/api';
 const HomeUserTable = ({isUserEditing,onInputChange}) => {
 
     const [userData, setUserData] = useState([]);
