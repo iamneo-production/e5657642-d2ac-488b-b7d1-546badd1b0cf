@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Account.css';
 import axios from 'axios';
-import base_url from './AccountsApi';
+import base_url from '../API/api';
 
 const AccountForm = ({ onAddAccount, onDeleteAccount }) => {
   const [data, setData] = useState({

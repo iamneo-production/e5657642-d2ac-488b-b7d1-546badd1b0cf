@@ -37,4 +37,11 @@ public class AccountServices {
  public void deleteAccount(long id) {
      accountsDao.deleteById(id);
  }
+ public Double getTotalBalanceByUserId(Long userId) {
+    return accountsDao.calculateTotalBalanceByUserId(userId);
+}
+public Double calculateTotalBalance() {
+    return accountsDao.calculateTotalBalance();
+}
+
 }
