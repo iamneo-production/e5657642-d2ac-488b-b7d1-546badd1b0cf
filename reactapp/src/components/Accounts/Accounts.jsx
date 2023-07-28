@@ -5,7 +5,7 @@ import DropDownButton from './DropDownButton';
 import './Account.css';
 import Table from './Table';
 import axios from 'axios';
-import base_url from './AccountsApi';
+import base_url from '../API/api';
 import '../NavBar/NavBar.css';
 import SideBar from '../NavBar/SideBar';
 

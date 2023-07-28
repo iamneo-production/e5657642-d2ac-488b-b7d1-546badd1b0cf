@@ -7,7 +7,7 @@ import HomeUserTable from './HomeUserTable';
 import HomeAccountTable from './HomeAccountTable';
 import './Home.css';
 import axios from 'axios';
-import base_url from './HomeApi';
+import base_url from '../API/api';
 const Home = () => {
 
   const [isUserEditing, setIsUserEditing] = useState(false);

@@ -5,6 +5,7 @@ import Header from '../NavBar/Header';
 import '../NavBar/NavBar.css';
 import SideBar from '../NavBar/SideBar';
 import './Table.css';
+import base_url from '../API/api';
 
 function EditGoal() {
     let navigate = useNavigate();
@@ -36,12 +37,12 @@ function EditGoal() {
   
     const onSubmit = async (e) => {
       e.preventDefault();
-      await axios.put(`https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/editgoal/${id}`, goal)
+      await axios.put(`${base_url}/editgoal/${id}`, goal)
       navigate("/goals");
     };
   
     const loadGoal = async () => {
-    const result = await axios.get(`https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/goal/${id}`)
+    const result = await axios.get(`${base_url}/goal/${id}`)
     setGoal(result.data);
     };
   

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from '../NavBar/Header';
 import '../NavBar/NavBar.css';
 import SideBar from '../NavBar/SideBar';
-
+import base_url from '../API/api';
 import Chart from 'chart.js/auto';
 import './Reports.css';
 
@@ -22,7 +22,7 @@ const Reports = () => {
   const fetchTransactionData = async () => {
     try {
       // Fetch transaction data
-      const responseBalance = await fetch('https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/Report/Balance');
+      const responseBalance = await fetch(`${base_url}/Report/Balance`);
       const Balance = parseFloat(await responseBalance.json());
       console.log('Total Balance:', Balance);
 
@@ -37,7 +37,7 @@ const Reports = () => {
   const fetchDebtData = async () => {
     try {
       // Fetch debt data
-      const responseDebtPaid = await fetch('https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/Report/total-interest');
+      const responseDebtPaid = await fetch(`${base_url}/Report/total-interest`);
       const totalDebt = parseFloat(await responseDebtPaid.json());
       console.log('Total debt:', totalDebt);
 

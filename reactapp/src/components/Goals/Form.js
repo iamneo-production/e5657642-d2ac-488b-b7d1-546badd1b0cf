@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-
+import base_url from '../API/api';
 
 export default function Form() {
 
@@ -24,7 +24,7 @@ export default function Form() {
     } 
     else{
     e.preventDefault();
-    await axios.post("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/goal", goal);
+    await axios.post(`${base_url}/goal`, goal);
     window.location.reload(false);
     }
   };

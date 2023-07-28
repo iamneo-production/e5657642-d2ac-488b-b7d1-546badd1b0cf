@@ -5,7 +5,7 @@ import SideBar from '../NavBar/SideBar';
 import './Debts.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import base_url from '../API/api';
 
 const Debts = () => {
   const[debtname, setDebtname]=useState('');
@@ -25,11 +25,11 @@ const Debts = () => {
   },[]);
 
   const loadDebts=async()=>{
-    const result = await axios.get("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/getDebts")
+    const result = await axios.get(`${base_url}/getDebts`)
     db_getDebts(result.data);
   }
   const deleteDebt=async (id)=>{
-    await axios.delete(`https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/deleteDebts/${id}`)
+    await axios.delete(`${base_url}/deleteDebts/${id}`)
     loadDebts();
   }
   const handleDebtnameChange = (e) => {
@@ -140,7 +140,7 @@ const Debts = () => {
     setTotal_interest_amount(0);
     setTotal_months(0);
 
-    await axios.post("https://8080-abdbccecdcbcfbfbdcabfdecaedefadebea.project.examly.io/Debts",sampleValues).then(response => {
+    await axios.post(`${base_url}/Debts`,sampleValues).then(response => {
       console.log('Data sent successfully to the backend:', response.data);
     }).catch(error => {
       console.error('Error sending data to the backend:', error);
