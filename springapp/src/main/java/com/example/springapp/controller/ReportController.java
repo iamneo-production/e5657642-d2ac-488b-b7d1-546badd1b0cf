@@ -11,7 +11,7 @@ import com.example.springapp.services.DebtsServices;
 
 @RestController
 @RequestMapping("/Report")
-@CrossOrigin(origins = "https://8081-abdbccecdcbcfbfbdcabeaeaadbdbabf.project.examly.io/")
+@CrossOrigin(origins = "https://8081-ffdbbecdfdbcfbfbdcabfdecaedefadebea.project.examly.io/")
 
 public class ReportController {
 
