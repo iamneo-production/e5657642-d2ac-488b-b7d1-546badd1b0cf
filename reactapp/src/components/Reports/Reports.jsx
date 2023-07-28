@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from '../NavBar/Header';
 import '../NavBar/NavBar.css';
 import SideBar from '../NavBar/SideBar';
+import base_url from '../API/api';
 import Chart from 'chart.js/auto';
 import './Reports.css';
 import axios from 'axios';
@@ -29,7 +30,7 @@ const Reports = () => {
   const fetchTransactionData = async () => {
     try {
       // Fetch transaction data
-      const responseBalance = await fetch('https://8080-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io/Report/Balance');
+      const responseBalance = await fetch(`${base_url}/Report/Balance`);
       const Balance = parseFloat(await responseBalance.json());
       console.log('Total Balance:', Balance);
 
@@ -44,7 +45,7 @@ const Reports = () => {
   const fetchDebtData = async () => {
     try {
       // Fetch debt data
-      const responseDebtPaid = await fetch('https://8080-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io/Report/total-interest');
+      const responseDebtPaid = await fetch(`${base_url}/Report/total-interest`);
       const totalDebt = parseFloat(await responseDebtPaid.json());
       console.log('Total debt:', totalDebt);
 
@@ -59,7 +60,7 @@ const Reports = () => {
     let data = {};
     data.id = JSON.parse(localStorage.getItem('id'));
     await axios({
-      url : `https://8080-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io/budget`,
+      url : `${base_url}/budget`,
       method : "get",
     }).then((response) => {
       console.log(response)
@@ -76,7 +77,7 @@ const Reports = () => {
     let data = {};
     data.id = JSON.parse(localStorage.getItem('id'));
     await axios({
-      url : `https://8080-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io/goals`,
+      url : `${base_url}/goals`,
       method : "get",
     }).then((response) => {
       console.log(response)
@@ -183,13 +184,12 @@ const Reports = () => {
 
     console.log(allGoals)
     const labels = [];
-      
-    const data = [200];
-    const data2 = [100];
+    const data = [];
+    const data2 = [];
     allGoals.forEach((ele) => 
       {
-        data.push(ele.currentAmount)
-        data2.push(ele.targetAmount)
+        data.push(ele.currentamount)
+        data2.push(ele.targetamount)
         labels.push(ele.description)
       }
     )
@@ -287,9 +287,9 @@ function colorize(opaque) {
       <Header />
       <SideBar>
       {/* <h1 className="Finance">Financial Report</h1> */}
-      <button onClick={handleBudgetGraphButtonClick}>Budget Report</button>
-      <button onClick={handleDebtGraphButtonClick}>Debt Report</button>
-      <button onClick={handleGoalGraphButtonClick}>Goal Report</button>
+      <button className='button-reports' onClick={handleBudgetGraphButtonClick}>Budget Report</button>
+      <button className='button-reports' onClick={handleDebtGraphButtonClick}>Debt Report</button>
+      <button className='button-reports' onClick={handleGoalGraphButtonClick}>Goal Report</button>
       <div className="chart-container">
         {showGoalGraph && <canvas ref={chartRef}></canvas>}
         {showDebtGraph && <canvas ref={chartRef}></canvas>}

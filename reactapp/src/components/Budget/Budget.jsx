@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "../Budget/Budget.css";
 import Modal from "react-modal";
 import { NavLink } from "react-router-dom";
-import {useEffect} from "react";
+import base_url from '../API/api';
 import Header from '../NavBar/Header';
 import SideBar from '../NavBar/SideBar';
 import axios from "axios";
 
 const Budget = () => {
-  const API_URL = "https://8080-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io"; // Update the port if necessary
 
   const [users, setUsers] = useState([]);
 
@@ -17,7 +16,7 @@ const Budget = () => {
     category: "",
     purpose: "",
     date: "",
-    amount: 0,
+    amount: '',
     status: "NOT PAID",
   });
   const { category, purpose, date, amount, status } = newusers;
@@ -49,14 +48,14 @@ const Budget = () => {
           };
           console.log(newusers.id);
           console.log(updatedBudget);
-          await axios.put(`${API_URL}/budget/${newusers.id}`, updatedBudget);
+          await axios.put(`${base_url}/budget/${newusers.id}`, updatedBudget);
           
           updatedUsers[editIndex] = updatedBudget;
           setUsers(updatedUsers);
           loadUsers();
         } else {
           const newBudget = { ...newusers};
-          await axios.post(`${API_URL}/budget`, newBudget);
+          await axios.post(`${base_url}/budget`, newBudget);
           loadUsers();
         }
         setFormErrors({});
@@ -77,11 +76,6 @@ const Budget = () => {
       alert("Please fill in all the input fields");
     }
   };
-  
-  
-  
-  
-  
 
   const handleUpdate = (index) => {
     setEditIndex(index);
@@ -97,7 +91,7 @@ const Budget = () => {
     console.log("UserId:", userId);
   
     try {
-      await axios.delete(`${API_URL}/budget/${userId}`);
+      await axios.delete(`${base_url}/budget/${userId}`);
       const updatedUsers = [...users];
       updatedUsers.splice(index, 1);
       setUsers(updatedUsers);
@@ -105,18 +99,13 @@ const Budget = () => {
       console.error(error);
     }
   };
-  
-  
-
-
-
 
   useEffect(() => {
     loadUsers();
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get(`${API_URL}/budget`);
+    const result = await axios.get(`${base_url}/budget`);
     const fetchedUsers = result.data;
   
     // Check if fetchedUsers array has data
@@ -131,43 +120,6 @@ const Budget = () => {
     }
   };
   
-
-  const [months, setMonths] = useState([]);
-  const [years, setYears] = useState([]);
-  const [selectedMonth, setSelectedMonth] = useState("");
-  const [selectedYear, setSelectedYear] = useState("");
-
-  useEffect(() => {
-    // Populate the month select with options
-    const monthOptions = [];
-    for (let i = 1; i <= 12; i++) {
-      monthOptions.push(
-        <option key={i} value={i}>
-          {i}
-        </option>
-      );
-    }
-    setMonths(monthOptions);
-    const currentYear = new Date().getFullYear();
-    const yearOptions = [];
-    for (let i = currentYear - 5; i <= currentYear + 5; i++) {
-      yearOptions.push(
-        <option key={i} value={i}>
-          {i}
-        </option>
-      );
-    }
-    setYears(yearOptions);
-    setSelectedMonth(new Date().getMonth() + 1);
-    setSelectedYear(currentYear);
-  }, []);
-
-  const handleMonthChange = (event) => {
-    setSelectedMonth(parseInt(event.target.value));
-  };
-  const handleYearChange = (event) => {
-    setSelectedYear(parseInt(event.target.value));
-  };
 
   const [estimateValue, setEstimateValue] = useState("");
 
@@ -203,7 +155,7 @@ const Budget = () => {
     try {
       console.log(user.id);
       console.log(updatedUser);
-      await axios.put(`${API_URL}/budget/${user.id}`, updatedUser);
+      await axios.put(`${base_url}/budget/${user.id}`, updatedUser);
       const updatedUsers = [...users];
       updatedUsers[index] = updatedUser;
       setUsers(updatedUsers);
@@ -212,14 +164,6 @@ const Budget = () => {
       // Handle the error appropriately, e.g., show an error message to the user
     }
   };
-  
-  
-  
-  
-  
-  
-  
-  
   
 
   const [totalAmount, setTotalAmount] = useState(0);
@@ -285,24 +229,6 @@ const Budget = () => {
     <div className="budget-page-container">
       <div className="budget-details-con">
         <div className="budget-details">
-          <div className="drop-down" style={{ color: "WHITE" }}>
-            <b>Month:</b>&nbsp;&nbsp;
-            <select
-              id="select1"
-              value={selectedMonth}
-              onChange={handleMonthChange}
-            >
-              {months}
-            </select>
-            <b>Year:</b>&nbsp;&nbsp;
-            <select
-              id="select1"
-              value={selectedYear}
-              onChange={handleYearChange}
-            >
-              {years}
-            </select>
-          </div>
           <div className="button">
             <button
               onClick={() => setModalIsOpen(true)}

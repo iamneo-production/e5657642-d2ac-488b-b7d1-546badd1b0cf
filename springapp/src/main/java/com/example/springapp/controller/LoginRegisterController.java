@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.*;
 
 @RestController
-@CrossOrigin("https://8081-dabbdacedfaabcfbfbdcabfdecaedefadebea.project.examly.io/")
+@CrossOrigin("https://8081-ffdbbecdfdbcfbfbdcabfdecaedefadebea.project.examly.io/")
 public class LoginRegisterController {
 
     @Autowired
@@ -57,10 +57,11 @@ public class LoginRegisterController {
                 .orElse(null);
     }
 
-    @RequestMapping(value = { "/logout" }, method = RequestMethod.POST)
-    public void logoutDo(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setHeader("Location", "/user");
-        response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
+    @RequestMapping(value = "/logout", method = RequestMethod.POST)
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+        // Invalidate the user's session on the server-side
+        request.getSession().invalidate();
+        return "Logout successful";
     }
 
 }
