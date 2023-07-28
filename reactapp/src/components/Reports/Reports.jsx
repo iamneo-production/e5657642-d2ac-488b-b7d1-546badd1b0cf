@@ -184,12 +184,12 @@ const Reports = () => {
     console.log(allGoals)
     const labels = [];
       
-    const data = [200];
-    const data2 = [100];
+    const data = [];
+    const data2 = [];
     allGoals.forEach((ele) => 
       {
-        data.push(ele.currentAmount)
-        data2.push(ele.targetAmount)
+        data.push(ele.currentamount)
+        data2.push(ele.targetamount)
         labels.push(ele.description)
       }
     )
