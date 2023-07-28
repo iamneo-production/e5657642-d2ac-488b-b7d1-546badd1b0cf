@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 //MyController.java
 @RestController
-@CrossOrigin("https://8081-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/")
+@CrossOrigin("https://8081-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io")
 public class AccountController {
  @Autowired
  private AccountServices accountsService;

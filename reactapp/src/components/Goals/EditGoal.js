@@ -36,12 +36,12 @@ function EditGoal() {
   
     const onSubmit = async (e) => {
       e.preventDefault();
-      await axios.put(`https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/editgoal/${id}`, goal)
+      await axios.put(`https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/editgoal/${id}`, goal)
       navigate("/goals");
     };
   
     const loadGoal = async () => {
-    const result = await axios.get(`https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/goal/${id}`)
+    const result = await axios.get(`https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/goal/${id}`)
     setGoal(result.data);
     };
   

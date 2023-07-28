@@ -22,7 +22,7 @@ const Reports = () => {
   const fetchTransactionData = async () => {
     try {
       // Fetch transaction data
-      const responseBalance = await fetch('https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/Report/Balance');
+      const responseBalance = await fetch('https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/Report/Balance');
       const Balance = parseFloat(await responseBalance.json());
       console.log('Total Balance:', Balance);
 
@@ -37,7 +37,7 @@ const Reports = () => {
   const fetchDebtData = async () => {
     try {
       // Fetch debt data
-      const responseDebtPaid = await fetch('https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/Report/total-interest');
+      const responseDebtPaid = await fetch('https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/Report/total-interest');
       const totalDebt = parseFloat(await responseDebtPaid.json());
       console.log('Total debt:', totalDebt);
 

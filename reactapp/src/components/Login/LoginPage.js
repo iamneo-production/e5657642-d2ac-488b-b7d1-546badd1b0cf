@@ -18,7 +18,7 @@ const LoginPage = () => {
     }
 
     useEffect(() => {
-        axios.get("https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/user").then((resp) => userdata(resp.data))
+        axios.get("https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/user").then((resp) => userdata(resp.data))
             .catch((error) => console.log(error))
     }, [])
 

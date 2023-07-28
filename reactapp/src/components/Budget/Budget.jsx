@@ -8,7 +8,7 @@ import SideBar from '../NavBar/SideBar';
 import axios from "axios";
 
 const Budget = () => {
-  const API_URL = "https://8080-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/"; // Update the port if necessary
+  const API_URL = "https://8080-afbabacabedeeeebcfbfbdcabeaeaadbdbabf.project.examly.io/"; // Update the port if necessary
 
   const [users, setUsers] = useState([]);
 
@@ -268,12 +268,13 @@ const Budget = () => {
 
   const customStyles = {
     content: {
-      width: "400px",
+      width: "450px",
       height: "450px",
       left: "35%",
       top: "20%",
       right: "auto",
       bottom: "auto",
+      overflow: "hidden",
     },
   };
 
