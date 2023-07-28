@@ -20,7 +20,7 @@ import com.example.springapp.model.Budget;
 import com.example.springapp.services.BudgetService;
 
 @RestController
-@CrossOrigin("https://8081-abdbccecdcbcfbfbdcabeaeaadbdbabf.project.examly.io/")
+@CrossOrigin("https://8081-efddfbedcacbcfbfbdcabfdecaedefadebea.project.examly.io")
 public class BudgetController {
 	
 	@Autowired
