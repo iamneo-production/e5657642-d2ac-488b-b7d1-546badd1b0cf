@@ -17,17 +17,14 @@ com/example/springapp/SpringappApplication.class
 com/example/springapp/exception/GoalNotFoundAdvice.class
 com/example/springapp/model/LoginRegisterModel.class
 com/example/springapp/repository/GoalRepository.class
-<<<<<<< HEAD
-=======
 com/example/springapp/services/TransactionServices.class
->>>>>>> e606fda569e7837d821b3d99534f9bae55e933fd
 com/example/springapp/exception/ErrorResponse.class
 com/example/springapp/services/AccountServices.class
 com/example/springapp/model/Budget.class
 com/example/springapp/controller/BudgetController.class
 com/example/springapp/services/DebtsServices.class
 com/example/springapp/repository/BudgetRepository.class
-com/example/springapp/controller/TransactionController.class
 com/example/springapp/controller/ReportController.class
+com/example/springapp/controller/TransactionController.class
 com/example/springapp/services/BudgetServiceImpl.class
 com/example/springapp/repository/AccountRepository.class
