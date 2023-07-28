@@ -287,9 +287,9 @@ function colorize(opaque) {
       <Header />
       <SideBar>
       {/* <h1 className="Finance">Financial Report</h1> */}
-      <button className='button' onClick={handleBudgetGraphButtonClick}>Budget Report</button>
-      <button className='button' onClick={handleDebtGraphButtonClick}>Debt Report</button>
-      <button className='button' onClick={handleGoalGraphButtonClick}>Goal Report</button>
+      <button className='button-reports' onClick={handleBudgetGraphButtonClick}>Budget Report</button>
+      <button className='button-reports' onClick={handleDebtGraphButtonClick}>Debt Report</button>
+      <button className='button-reports' onClick={handleGoalGraphButtonClick}>Goal Report</button>
       <div className="chart-container">
         {showGoalGraph && <canvas ref={chartRef}></canvas>}
         {showDebtGraph && <canvas ref={chartRef}></canvas>}
