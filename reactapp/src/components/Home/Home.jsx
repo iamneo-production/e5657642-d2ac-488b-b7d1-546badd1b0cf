@@ -7,7 +7,7 @@ import HomeUserTable from './HomeUserTable';
 import HomeAccountTable from './HomeAccountTable';
 import './Home.css';
 import axios from 'axios';
-import base_url from './HomeApi';
+import base_url from '../API/api';
 const Home = () => {
 
   const [isUserEditing, setIsUserEditing] = useState(false);
@@ -86,10 +86,13 @@ const Home = () => {
       </div>
 
       {/*rendering the user data in the table by fetching from the database */}
+      <div>
       <HomeUserTable  isUserEditing={isUserEditing}  onInputChange={handleInputChange}  /> 
-
+      </div>
       {/* rendering account table connected to the accounts page*/}
+      <div className='acc-user'>
       <HomeAccountTable/>
+      </div>
       </div>
       </SideBar>
 
