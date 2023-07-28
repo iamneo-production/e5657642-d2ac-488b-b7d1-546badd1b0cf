@@ -14,8 +14,10 @@ const Header = () => {
       }
     };
 
+    // Fetch the logged-in user's firstname from local storage
     const storedFirstname = localStorage.getItem('firstname');
-    setFirstname(storedFirstname || "");
+    setFirstname(storedFirstname || ""); // Set the firstname in the state
+
 
     window.addEventListener('scroll', handleScroll);
     return () => {

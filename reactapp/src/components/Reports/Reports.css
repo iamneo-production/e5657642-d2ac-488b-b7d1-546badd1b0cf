@@ -1,11 +1,18 @@
-button {
-    background-color: rgb(4, 121, 142);
-  color: white;
-  padding: 10px;
+.button-reports {
+  width: 17vh;
+  height: 4.8vh;
+  background-color:rgb(4, 121, 142);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 5px;
   border: none;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  
+  font-family:'Lucida Sans';
+  margin-left: 2%;
+  margin-bottom: 2%;
   }
+
+  .button-reports:hover{
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(38, 188, 215);
+}
