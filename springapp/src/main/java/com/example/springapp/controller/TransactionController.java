@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin("https://8081-ffdbbecdfdbcfbfbdcabfdecaedefadebea.project.examly.io/")
+@CrossOrigin("https://8081-eddaadaeccfebebcfbfbdcabfdecaedefadebea.project.examly.io/")
 public class TransactionController {
 
     @Autowired
