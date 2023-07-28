@@ -1,0 +1,36 @@
+#dropdown-account{
+  position: absolute;
+  background-color: hsl(0, 4%, 76%);
+  outline: none;
+  padding: 0.8%;
+  font-family: 'Lucida Sans';
+  font-size: 1rem;
+  border-radius:1.5vh;
+}
+.showtrans{
+  margin-left: 20%;
+  height: 5.2vh;
+  width: 20vh;
+  background-color: rgb(39, 93, 240);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 2vh;
+  font-family: 'Lucida Sans';
+}
+.showtrans:hover{
+  background-color: rgb(92, 135, 253);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.account_detail td{
+  padding: 0%;
+  background-color: white;
+}
+.account_detail th{
+  font-weight: bold;
+  background-color: rgb(255, 255, 255, 0.7);
+  color: black;
+  border: 1px solid black;
+}
